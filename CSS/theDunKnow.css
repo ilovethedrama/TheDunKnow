@@ -1,0 +1,249 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.titleMain {
+  color: black;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 5rem;
+  max-width: 100px;
+  line-height: 3.5rem;
+  padding-top: 1%;
+}
+
+.innerContentMainTop {
+  margin-bottom: 15px;
+  height: 55vh;
+  background-image: url("../Media/alita_battle_angel.jpg");
+  background-position-y: -70px;
+  background-size: cover;
+  box-sizing: border-box;
+}
+
+.innerContentMainBottom {
+  margin: 5px 0px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+.innerContentMini {
+  box-sizing: border-box;
+  height: 250px;
+  width: 250px;
+  flex: 1 1 250px;
+  border: transparent;
+  background-size: cover;
+  background-image: url("../Media/green_book.jpg");
+  background-position-x: -10px;
+}
+
+.innerContentMed {
+  box-sizing: border-box;
+  height: 250px;
+  flex: 2 1 600px;
+  border: transparent;
+  background-image: url("../Media/alita_battle_angel.jpg");
+  background-position-y: -70px;
+}
+
+.hero {
+  position: relative;
+  border: transparent;
+  padding: 5px;
+  min-height: 100vh;
+  background-image: url();
+  background-size: cover;
+  margin-bottom: 50px;
+  color: black;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.9), 0 6px 20px 0 rgba(0, 0, 0, 0.9); */
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  color: black;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+}
+
+nav {
+  position: relative;
+}
+
+#navbar {
+  width: 100%;
+  overflow: hidden;
+  z-index: 10000;
+  /* background-color: grey; */
+}
+
+.navContent {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin: 20px 0px;
+}
+
+.poz {
+  position: relative;
+}
+
+.titleBack {
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background-color: rgba(219, 199, 199, 0.6);
+  font-family: "Cormorant Garamond", serif;
+  width: 100%;
+}
+
+.navContent a:hover {
+  transition: 0.3s ease;
+  color: yellow;
+  background-color: grey;
+}
+
+.sectionName {
+  width: auto;
+  z-index: 10000;
+  text-align: center;
+  padding: 5px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.featureHeading {
+  box-sizing: border-box;
+  padding: 5% 3px;
+  width: 100%;
+  font-family: "Kite One", sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: grey;
+  text-align: center;
+}
+
+.flexContainer {
+  width: 100%;
+  display: flex;
+  flex-basis: column wrap;
+  justify-content: space-between;
+}
+
+.flexContainer .innerContentMini {
+  height: 125px;
+  width: 200px;
+}
+
+.navContent a {
+  text-decoration: none;
+  color: black;
+  font-family: "Cormorant Garamond", serif;
+}
+
+#secondSell {
+  margin-top: 90px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.feature {
+  background-image: url("../Media/split.jpg");
+  height: 400px;
+  width: 400px;
+  margin: 10px;
+  flex-basis: 1 0 300px;
+  position: relative;
+  margin: 20px;
+}
+
+.sideMenu {
+  width: 300px;
+  position: relative;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  /* background-color: grey; */
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky + .content {
+  padding-top: 65px;
+}
+
+@media (max-width: 1155px) {
+  .featureHeading {
+    width: 270px;
+    height: 150px;
+    font-size: 0.8rem;
+  }
+
+  .feature {
+    height: 375px;
+    width: 550px;
+  }
+}
+@media (max-width: 700px) {
+  header h1 {
+    order: 1;
+  }
+
+  header #search {
+    order: 2;
+  }
+
+  header #subscribe {
+    order: 3;
+  }
+
+  nav {
+    overflow: hidden;
+  }
+
+  .innerContentMainBottom {
+    display: flex;
+    flex-flow: row wrap;
+    /* height: 100vh; */
+  }
+
+  .innerContentMini {
+    flex: 1 1 600px;
+  }
+
+  .innerContentMed {
+    flex: 1 1 600px;
+  }
+
+  .featureHeading {
+    left: 0;
+    top: 0;
+  }
+
+  .feature:nth-child(2) {
+    left: 0;
+  }
+
+  .feature:nth-child(2) .featureHeading {
+    left: 0;
+    z-index: 1000;
+  }
+}
+
+/*# sourceMappingURL=theDunKnow.css.map */
