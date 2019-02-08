@@ -3,6 +3,19 @@
   margin: 0;
 }
 
+
+.content {
+  /* scroll-snap-type: y proximity;
+  overflow-y: scroll;*/
+  height: 100vh; 
+}
+
+section {
+  /* scroll-snap-align: start;
+  scroll-snap-stop: always; */
+  height: 100vh;
+}
+
 .titleMain {
   color: black;
   font-family: "Cormorant Garamond", serif;
@@ -119,15 +132,7 @@ nav {
 }
 
 .featureHeading {
-  box-sizing: border-box;
-  padding: 5% 3px;
-  width: 100%;
-  font-family: "Kite One", sans-serif;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: grey;
-  text-align: center;
+
 }
 
 .flexContainer {
@@ -151,22 +156,62 @@ nav {
 #secondSell {
   margin-top: 90px;
   display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-between;
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  height: 100vh;
+  
+  
+  /* overflow: hidden; */
+  scroll-snap-type: y proximity;
+  overflow-y: scroll;
 }
 
-.feature {
-  background-image: url("../Media/split.jpg");
-  height: 400px;
-  width: 400px;
-  margin: 10px;
-  flex-basis: 1 0 300px;
+.feature{
   position: relative;
-  margin: 20px;
+  height:auto;
+  width: auto;
+  box-sizing: border-box;
+
+  scroll-snap-align: start;
+
+  height: 33vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+#secondSell img {
+  opacity: 1;
+  padding: 5px;
+  width: 400px;
+  height:200px;
+  /* flex: 1 1 none; */
+  position: relative;
+  object-fit: cover;
+}
+
+#secondSell:hover img:not(:hover) {
+  opacity:.6;
+  transition: .5s;
+}
+
+
+.feature h2 {
+  padding: 10px;
+  border-right: 3px solid yellow;
+  font-size: 1rem;
+  position: absolute;
+  left: 0;
+  bottom:10%;
+  color:black;
+  background-color: rgba(255, 255, 255, .5);
+  font-family: 'Cormorant Garamond';
+}
+
 
 .sideMenu {
   width: 300px;
@@ -189,16 +234,7 @@ nav {
 }
 
 @media (max-width: 1155px) {
-  .featureHeading {
-    width: 270px;
-    height: 150px;
-    font-size: 0.8rem;
-  }
 
-  .feature {
-    height: 375px;
-    width: 550px;
-  }
 }
 @media (max-width: 700px) {
   header h1 {
@@ -229,20 +265,6 @@ nav {
 
   .innerContentMed {
     flex: 1 1 600px;
-  }
-
-  .featureHeading {
-    left: 0;
-    top: 0;
-  }
-
-  .feature:nth-child(2) {
-    left: 0;
-  }
-
-  .feature:nth-child(2) .featureHeading {
-    left: 0;
-    z-index: 1000;
   }
 }
 
