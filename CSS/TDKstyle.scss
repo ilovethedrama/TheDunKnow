@@ -337,8 +337,12 @@ nav {
 
 @media (max-width: 835px) {
     .heroMain {
-        border: 3px solid yellow;
        flex-flow: column wrap;
+    }
+
+    .hero .heroMain .mainHeading {
+        // border : 3px solid blue;   
+        height: 150px;
     }
 }
 
