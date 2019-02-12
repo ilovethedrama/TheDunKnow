@@ -1,281 +1,282 @@
 * {
-  padding: 0;
-  margin: 0;
-}
-
-body {
-  background-color: rgba(219, 219, 219, 0.5);
-}
-
-.titleMain {
-  color: black;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 5rem;
-  max-width: 100px;
-  line-height: 3.5rem;
-  padding-top: 1%;
-}
-
-section {
-  height: 100vh;
-}
-
-main {
-  height: auto;
-  width: auto;
-}
-
-footer {
-  height: 100%;
-}
-
-.hero {
-  position: relative;
-  border: transparent;
-  min-height: 100vh;
-  margin-bottom: 50px;
-  color: black;
-}
-.hero .heroMain {
-  box-sizing: border-box;
-  display: flex;
-  justify-content: flex-end;
-  padding-bottom: 40px;
-}
-.hero .heroMain img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-.hero .heroMain .mainHeading {
-  height: 400px;
-  position: relative;
-  width: 100%;
-  background-color: white;
-}
-.hero .heroMain .mainHeading:hover {
-  background-color: #dbdbdb;
-  transition: 0.5s;
-}
-.hero .heroMain .mainHeading h2 {
-  top: 33%;
-  left: 0;
-  padding: 0px 50px;
-  font-size: 1.4rem;
-  text-align: center;
-  position: absolute;
-  font-family: "Cormorant Garamond", serif;
-  padding-bottom: 40px;
-}
-.hero .heroMain .mainHeading h2:after {
-  content: "";
-  width: 20%;
-  border-bottom: 2px solid black;
-  position: absolute;
-  top: 100%;
-  left: 40%;
-}
-.hero .heroMain .mainHeading p {
-  position: absolute;
-  bottom: 10%;
-  left: 65%;
-  font-family: "Cormorant Garamond", serif;
-  text-align: center;
-}
-.hero .heroMain .mainHeading p span {
-  font-family: "Bowlby One SC", cursive;
-  font-size: 0.8rem;
-  text-align: right;
-}
-
-.heroSecond {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  width: auto;
-}
-.heroSecond .heroMiniFeat {
-  box-sizing: border-box;
-  border-top: 1px solid black;
-  min-height: auto;
-  width: auto;
-  position: relative;
-  margin: 0 30px 20px 0;
-  display: flex;
-}
-.heroSecond .heroMiniFeat img {
-  object-fit: cover;
-  padding: 20px 0 0 0;
-  width: 70px;
-  height: 70px;
-}
-.heroSecond .heroMiniFeat .miniHeading {
-  box-sizing: border-box;
-  position: relative;
-  height: 100%;
-  width: 200px;
-  padding: 20px 0 0 20px;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 0.75rem;
-}
-.heroSecond .heroMiniFeat .miniHeading p {
-  padding-top: 15px;
-}
-
-header {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: center;
-  color: black;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
-}
-
-nav {
-  position: relative;
-}
-nav #navbar {
-  width: 100%;
-  overflow: hidden;
-  z-index: 10000;
-}
-
-.navContent {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-around;
-}
-.navContent a {
-  padding: 5px;
-  text-decoration: none;
-  color: black;
-  font-family: "Cormorant Garamond", serif;
-}
-
-footer {
-  display: flex;
-}
-
-.navContent a:hover {
-  transition: 0.3s ease;
-  color: yellow;
-  background-color: grey;
-}
-
-.sectionName {
-  width: auto;
-  z-index: 10000;
-  text-align: center;
-  padding: 5px;
-  font-family: "Cormorant Garamond", serif;
-}
-
-#secondSell {
-  margin-top: 90px;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  position: relative;
-  width: 100%;
-  overflow: clip;
-  box-sizing: border-box;
-}
-
-.feature img {
-  height: 250px;
-  width: 300px;
-  margin: 10px;
-  object-fit: cover;
-  flex-basis: 1 0 300px;
-  position: relative;
-  margin: 20px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  /* background-color: grey; */
-}
-
-.content {
-  padding: 16px;
-  display: flex;
-  flex-flow: row wrap;
-  height: 100vh;
-}
-
-.sticky + .content {
-  padding-top: 65px;
-}
-
-@media (max-width: 1155px) {
-  .featureHeading {
-    width: 270px;
-    height: 150px;
-    font-size: 0.8rem;
+    padding: 0;
+    margin: 0;
   }
-
-  .feature {
-    height: 375px;
-    width: 550px;
+  
+  body {
+    background-color: rgba(219, 219, 219, 0.5);
   }
-
-  .hero .heroMain aside h2 {
-    font-size: 1.2rem;
+  
+  .titleMain {
+    color: black;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 5rem;
+    max-width: 100px;
+    line-height: 3.5rem;
+    padding-top: 1%;
   }
-
-  .heroSecond .heroMiniFeat img {
-    height: 150px;
-    width: 150px;
+  
+  section {
+    height: 100vh;
   }
-}
-@media (max-width: 1040px) {
-  aside p {
-    display: none;
+  
+  main {
+    height: auto;
+    width: auto;
   }
-
-  .heroSecond .heroMiniFeat img {
-    height: 200px;
-    width: 300px;
+  
+  footer {
+    height: 100%;
   }
-
+  
+  .hero {
+    position: relative;
+    border: transparent;
+    min-height: 100vh;
+    margin-bottom: 50px;
+    color: black;
+  }
+  .hero .heroMain {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+  }
+  .hero .heroMain img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+  .hero .heroMain .mainHeading {
+    height: 400px;
+    position: relative;
+    width: 100%;
+    background-color: white;
+  }
+  .hero .heroMain .mainHeading:hover {
+    background-color: #dbdbdb;
+    transition: 0.5s;
+  }
+  .hero .heroMain .mainHeading h2 {
+    top: 33%;
+    left: 0;
+    padding: 0px 50px;
+    font-size: 1.4rem;
+    text-align: center;
+    position: absolute;
+    font-family: "Cormorant Garamond", serif;
+    padding-bottom: 40px;
+  }
   .hero .heroMain .mainHeading h2:after {
-    border: none;
     content: "";
+    width: 20%;
+    border-bottom: 2px solid black;
+    position: absolute;
+    top: 100%;
+    left: 40%;
   }
-}
-@media (max-width: 700px) {
-  header h1 {
-    order: 1;
+  .hero .heroMain .mainHeading p {
+    position: absolute;
+    bottom: 10%;
+    left: 65%;
+    font-family: "Cormorant Garamond", serif;
+    text-align: center;
   }
-
-  header #search {
-    order: 2;
+  .hero .heroMain .mainHeading p span {
+    font-family: "Bowlby One SC", cursive;
+    font-size: 0.8rem;
+    text-align: right;
   }
-
-  header #subscribe {
-    order: 3;
+  
+  .heroSecond {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    width: auto;
   }
-
+  .heroSecond .heroMiniFeat {
+    box-sizing: border-box;
+    border-top: 1px solid black;
+    min-height: auto;
+    width: auto;
+    position: relative;
+    margin: 0 30px 20px 0;
+    display: flex;
+  }
+  .heroSecond .heroMiniFeat img {
+    object-fit: cover;
+    padding: 20px 0 0 0;
+    width: 70px;
+    height: 70px;
+  }
+  .heroSecond .heroMiniFeat .miniHeading {
+    box-sizing: border-box;
+    position: relative;
+    height: 100%;
+    width: 200px;
+    padding: 20px 0 0 20px;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 0.75rem;
+  }
+  .heroSecond .heroMiniFeat .miniHeading p {
+    padding-top: 15px;
+  }
+  
+  header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    color: black;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.5rem;
+  }
+  
   nav {
+    position: relative;
+  }
+  nav #navbar {
+    width: 100%;
     overflow: hidden;
+    z-index: 10000;
   }
-
-  .featureHeading {
-    left: 0;
+  
+  .navContent {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+  }
+  .navContent a {
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  footer {
+    display: flex;
+  }
+  
+  .navContent a:hover {
+    transition: 0.3s ease;
+    color: yellow;
+    background-color: grey;
+  }
+  
+  .sectionName {
+    width: auto;
+    z-index: 10000;
+    text-align: center;
+    padding: 5px;
+    font-family: "Cormorant Garamond", serif;
+  }
+  
+  #secondSell {
+    margin-top: 90px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    position: relative;
+    width: 100%;
+    overflow: clip;
+    box-sizing: border-box;
+  }
+  
+  .feature img {
+    height: 250px;
+    width: 300px;
+    margin: 10px;
+    object-fit: cover;
+    flex-basis: 1 0 300px;
+    position: relative;
+    margin: 20px;
+  }
+  
+  .sticky {
+    position: fixed;
     top: 0;
+    width: 100%;
+    /* background-color: grey; */
   }
-
-  .feature:nth-child(2) {
-    left: 0;
+  
+  .content {
+    padding: 16px;
+    display: flex;
+    flex-flow: row wrap;
+    height: 100vh;
   }
-
-  .feature:nth-child(2) .featureHeading {
-    left: 0;
-    z-index: 1000;
+  
+  .sticky + .content {
+    padding-top: 65px;
   }
-}
-
-/*# sourceMappingURL=theDunKnow.css.map */
+  
+  @media (max-width: 1155px) {
+    .featureHeading {
+      width: 270px;
+      height: 150px;
+      font-size: 0.8rem;
+    }
+  
+    .feature {
+      height: 375px;
+      width: 550px;
+    }
+  
+    .hero .heroMain aside h2 {
+      font-size: 1.2rem;
+    }
+  
+    .heroSecond .heroMiniFeat img {
+      height: 150px;
+      width: 150px;
+    }
+  }
+  @media (max-width: 1040px) {
+    aside p {
+      display: none;
+    }
+  
+    .heroSecond .heroMiniFeat img {
+      height: 200px;
+      width: 300px;
+    }
+  
+    .hero .heroMain .mainHeading h2:after {
+      border: none;
+      content: "";
+    }
+  }
+  @media (max-width: 700px) {
+    header h1 {
+      order: 1;
+    }
+  
+    header #search {
+      order: 2;
+    }
+  
+    header #subscribe {
+      order: 3;
+    }
+  
+    nav {
+      overflow: hidden;
+    }
+  
+    .featureHeading {
+      left: 0;
+      top: 0;
+    }
+  
+    .feature:nth-child(2) {
+      left: 0;
+    }
+  
+    .feature:nth-child(2) .featureHeading {
+      left: 0;
+      z-index: 1000;
+    }
+  }
+  
+  /*# sourceMappingURL=theDunKnow.css.map */
+  
