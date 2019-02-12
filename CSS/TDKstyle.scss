@@ -22,9 +22,9 @@ body {
 }
 
 // main {
-//     display: flex;
-//     justify-content: center;
-    
+//     display: inline-flex;
+//     align-content:normal;
+//     border: 2px solid blue;   
 // }
 
 footer {
@@ -107,7 +107,7 @@ footer {
         .heroMiniFeat {
             box-sizing: border-box;
             border-top: 1px solid black;
-            min-height: auto;
+            height: auto;
             width: auto;
             position: relative;
             margin: 0 20px 20px 20px;
@@ -224,12 +224,11 @@ nav {
 
 
 #secondSell {
-    margin-top: 90px;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     position: relative;
-    width: 100%;
+    width: auto;
     overflow: clip;
     box-sizing: border-box;
 }
@@ -247,7 +246,6 @@ nav {
     padding: 16px;
     display:flex;
     flex-flow: row wrap;
-    height: 100vh;
 }
 
 .sticky + .content {
@@ -280,14 +278,13 @@ nav {
 
         }
     }
-    .heroSecond {
-        .heroMiniFeat {
-            img {
-                height:150px;
-                width: 150px;
+
+            .heroMiniFeat {
+                img {
+                    height:150px;
+                    width: 150px;
+                }
             }
-        }
-    }
 }
 
 @media (max-width: 1040px) {
@@ -297,14 +294,13 @@ nav {
                 display: none;
             }
         }
-        .heroSecond {
-            .heroMiniFeat {
-                img {
-                    height:200px;
-                    width: 300px;
+  
+                .heroMiniFeat {
+                    img {
+                        height:200px;
+                        width: 300px;
+                    }
                 }
-            }
-        }
 
 .hero {
     .heroMain {
@@ -346,11 +342,6 @@ nav {
 
     nav {
         overflow: hidden;
-    }
-
-    .featureHeading {
-        left:0;
-        top:0;
     }
     
 }
