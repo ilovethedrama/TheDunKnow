@@ -15,6 +15,88 @@ body {
   line-height: 3.5rem;
   padding-top: 1%;
 }
+.titleMain span {
+  padding-top: 50px;
+  transition: 5s;
+}
+.titleMain span:hover {
+  font-family: "Bowlby One SC", cursive;
+}
+
+.showcase {
+  padding-top: 50px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  width: 50%;
+  min-width: 500px;
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  font-weight: 300;
+  color: #888;
+  -webkit-font-smoothing: antialiased;
+}
+
+.showcaseTabs {
+  display: flex;
+  flex-flow: row nowrap;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+}
+.showcaseTabs li {
+  line-height: 38px;
+  overflow: hidden;
+  padding: 5px;
+  position: relative;
+}
+.showcaseTabs a {
+  background-color: #eff0f2;
+  font-family: "Cormorant Garamond", serif;
+  border-bottom: 1px solid #fff;
+  color: black;
+  font-size: 1.3rem;
+  font-weight: 500;
+  display: block;
+  letter-spacing: 0;
+  outline: none;
+  padding: 0 20px;
+  text-decoration: none;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 1px solid grey;
+}
+
+.tabs_item {
+  display: none;
+  padding: 30px;
+}
+.tabs_item h4 {
+  font-weight: bold;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  color: black;
+}
+.tabs_item img {
+  width: 250px;
+  float: left;
+  height: 250px;
+  object-fit: cover;
+  margin-right: 30px;
+}
+.tabs_item:first-child {
+  display: block;
+}
+
+.current a {
+  font-family: "Cormorant Garamond", serif;
+  color: #fff;
+  background: black;
+}
 
 footer {
   height: 100%;
@@ -86,19 +168,19 @@ footer {
   justify-content: center;
   width: auto;
 }
-.heroSecond:hover {
-  opacity: 0.7;
-  transition: 0.5s;
-}
 
 .heroMiniFeat {
   box-sizing: border-box;
-  border-top: 1px solid black;
+  border-top: 1px solid #b1adad;
   height: auto;
   width: auto;
   position: relative;
   margin: 0 20px 20px 20px;
   display: flex;
+  transition: 0.5s ease;
+}
+.heroMiniFeat:not(:hover) {
+  opacity: 0.75;
 }
 .heroMiniFeat img {
   object-fit: cover;
@@ -177,15 +259,21 @@ footer {
   overflow: clip;
   box-sizing: border-box;
 }
-#secondSell:hover {
-  opacity: 0.7;
-  transition: 0.5s;
-}
 
 .sticky {
+  z-index: 1000;
+  padding: 10px 0px;
   position: fixed;
   top: 0;
   width: 100%;
+  background-color: black;
+  transition: 0.4s;
+}
+.sticky a {
+  color: white;
+}
+.sticky a:hover {
+  background-color: black;
 }
 
 .content {
@@ -196,6 +284,10 @@ footer {
 
 .sticky + .content {
   padding-top: 65px;
+}
+
+.hideme {
+  opacity: 0;
 }
 
 @media (max-width: 1155px) {
@@ -212,11 +304,13 @@ footer {
 
   .hero .heroMain aside h2 {
     font-size: 1.2rem;
+    transition: 0.4s ease;
   }
 
   .heroMiniFeat img {
     height: 150px;
     width: 150px;
+    transition: 0.4s ease;
   }
 }
 @media (max-width: 1040px) {
@@ -227,6 +321,7 @@ footer {
   .heroMiniFeat img {
     height: 200px;
     width: 300px;
+    transition: 0.4s ease;
   }
 
   .hero .heroMain .mainHeading h2:after {
@@ -237,10 +332,12 @@ footer {
 @media (max-width: 835px) {
   .heroMain {
     flex-flow: column wrap;
+    transition: 0.4s ease;
   }
 
   .hero .heroMain .mainHeading {
     height: 150px;
+    transition: 0.4s ease;
   }
 }
 @media (max-width: 700px) {
