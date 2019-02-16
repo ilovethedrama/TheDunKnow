@@ -18,13 +18,114 @@ body {
     max-width: 100px;
     line-height: 3.5rem;
     padding-top: 1%;
+    span {
+        transition: all .5s;
+        span:nth-child(2) {
+            transition-delay: .1s;
+            color:grey;
+        }
+        span:nth-child(3) {
+            transition-delay: .2s;
+            color:green;
+        }
+        span:nth-child(4) {
+            transition-delay: .3s;
+        }
+        &:hover {
+            span {
+            font-family: $subtitlefont;
+            }
+            // span:nth-child(4) {
+
+            // }
+        }
+    }
 }
 
-// main {
-//     display: inline-flex;
-//     align-content:normal;
-//     border: 2px solid blue;   
-// }
+////// SEXY TAB INFO
+.showcase {
+	padding-top: 50px;
+	margin-bottom: 20px;
+	position: relative;
+	overflow: hidden;
+	background: #fff;
+	width: 50%;
+    min-width: 500px;
+	margin: 0 auto;
+	font-family: 'Roboto', sans-serif;
+	line-height: 1.5;
+	font-weight: 300;
+	color: #888;
+	-webkit-font-smoothing: antialiased;
+}
+
+.showcaseTabs {
+    display: flex;
+    flex-flow: row nowrap;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+    width: 100%;
+	
+	li {
+		// float: left;
+		line-height: 38px;
+		overflow: hidden;
+		padding: 5px;
+		position: relative;
+	}
+
+	a {
+        background-color: #eff0f2;
+        font-family: $mainfont;
+		border-bottom: 1px solid #fff;
+        color: black;
+        font-size: 1.3rem;
+		font-weight: 500;
+		display: block;
+		letter-spacing: 0;
+		outline: none;
+		padding: 0 20px;
+		text-decoration: none;
+		-webkit-transition: all 0.2s ease-in-out;
+		-moz-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+		border-bottom: 1px solid grey;
+	}
+}
+
+.tabs_item {
+	display: none;
+    padding: 30px ;
+
+	h4 {
+		font-weight: bold;;
+        font-family: $mainfont;
+        font-size: 1.5rem;
+        color: black;
+	}
+
+	img {
+		width: 250px;
+        float: left;
+        height: 250px;
+        object-fit: cover;
+		margin-right: 30px;
+	}
+
+    &:first-child {display: block;}
+    
+
+}
+
+.current a {
+    font-family: $mainfont;
+	color: #fff;
+	background: black;
+}
+
+
+
 
 footer {
     height:100%;
@@ -93,27 +194,33 @@ footer {
     }
 }
 
+
+//  .heroMiniFeat:not(:hover){
+//     opacity: .75;
+//   }
+
+
 ////// HERO - MINI SECTION
 .heroSecond {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     width: auto;
-    &:hover {
-        opacity: .7;
-        transition: .5s;
-        
-    }
+
 } 
 
         .heroMiniFeat {
             box-sizing: border-box;
-            border-top: 1px solid black;
+            border-top: 1px solid rgb(177, 173, 173);
             height: auto;
             width: auto;
             position: relative;
             margin: 0 20px 20px 20px;
             display:flex;
+            transition: .5s ease;
+            &:not(:hover) {
+                    opacity: .75;
+            }
             img {
                 object-fit: cover;
                 padding: 20px 0 0 0;
@@ -230,18 +337,25 @@ nav {
     width: auto;
     overflow: clip;
     box-sizing: border-box;
-    &:hover {
-        opacity: .7;
-        transition: .5s;
-    }
+
 }
 
 
 
 .sticky {
+    z-index: 1000;
+    padding:10px 0px;
     position:fixed;
     top: 0;
     width: 100%;
+    background-color: black;
+    transition: .4s;
+    a {
+        color: white;
+        &:hover {
+            background-color: black;
+        }
+    }
 }
 
 .content {
@@ -252,6 +366,11 @@ nav {
 
 .sticky + .content {
     padding-top: 65px;
+}
+
+.hideme
+{
+    opacity:0;
 }
 
 
@@ -275,6 +394,7 @@ nav {
             aside {
                 h2 {
                     font-size: 1.2rem;
+                    transition: .4s ease;
                 }
             }
 
@@ -285,6 +405,7 @@ nav {
                 img {
                     height:150px;
                     width: 150px;
+                    transition: .4s ease;
                 }
             }
 }
@@ -301,6 +422,7 @@ nav {
                     img {
                         height:200px;
                         width: 300px;
+                        transition: .4s ease;
                     }
                 }
 
@@ -322,10 +444,12 @@ nav {
 @media (max-width: 835px) {
     .heroMain {
        flex-flow: column wrap;
+       transition: .4s ease;
     }
 
     .hero .heroMain .mainHeading { 
         height: 150px;
+        transition: .4s ease;
     }
 }
 
@@ -345,4 +469,10 @@ nav {
         overflow: hidden;
     }
     
+}
+
+/////////////////featureLayout
+
+.pgContents {
+    border: 3px solid green;
 }
