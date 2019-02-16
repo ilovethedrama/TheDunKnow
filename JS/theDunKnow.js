@@ -15,23 +15,32 @@ function myFunction() {
   }
 }
 
-$(document).ready(function() { 
 
-	(function ($) { 
-		$('.showcase ul.showcaseTabs').addClass('active').find('> li:eq(0)').addClass('current');
-		
-		$('.showcase ul.showcaseTabs li a').click(function (g) { 
-			var tab = $(this).closest('.showcase'), 
-				index = $(this).closest('li').index();
-			
-			tab.find('ul.showcase > li').removeClass('current');
-			$(this).closest('li').addClass('current');
-			
-			tab.find('.tab_content').find('div.tabs_item').not('div.tabs_item:eq(' + index + ')').slideUp();
-			tab.find('.tab_content').find('div.tabs_item:eq(' + index + ')').slideDown();
-			
-			g.preventDefault();
-		} );
-	})(jQuery);
 
+$(function(){  // $(document).ready shorthand
+  $('.monster').fadeIn('slow');
+});
+
+$(document).ready(function() {
+    
+    /* Every time the window is scrolled ... */
+    $(window).scroll( function(){
+    
+        /* Check the location of each desired element */
+        $('.hideme').each( function(i){
+            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* If the object is completely visible in the window, fade it it */
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},1500);
+                    
+            }
+            
+        }); 
+    
+    });
+    
 });
