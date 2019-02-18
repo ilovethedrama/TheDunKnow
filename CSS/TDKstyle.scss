@@ -473,6 +473,107 @@ nav {
 
 /////////////////featureLayout
 
-.pgContents {
-    border: 3px solid green;
+.pgKingContainer {
+    display:flex;
+    flex-flow: row nowrap;
+    > * {
+        box-sizing: border-box; 
+    }
 }
+
+.pgWordContainer {
+    border-top: 2px solid black;
+    overflow-y: scroll;
+    display: flex;
+    height: 50vh;
+}
+
+.pgImgLeft {
+    flex: 1 1 50%;
+    img {
+        object-position: -70px -50px;   
+        object-fit: cover;
+        height:100vh;
+        width: 50vw;
+        padding: 0 50px 0 0;
+        box-sizing: border-box;
+    }
+}
+
+.pgContent {
+    flex: 1 1 50%;
+    // height: 100vh;
+    // border: 3px solid orange;
+    overflow-y: none;
+}
+
+
+.pgTitle {
+    margin-top:10px;
+    margin-bottom:20px;
+    position: relative;
+    // top:10px;
+    right: 150px;
+    // padding: 20px;
+    padding: 0 20px 20px 20px;
+    flex: 1 1 auto;
+    font-size: 4rem;
+    font-family: $mainfont;
+    box-sizing: border-box;
+    // border-left: 5px solid black;
+    background-color: white;
+    h4 {
+        padding: 10px 0 0 10px;
+        font-size: 1.2rem;   
+        font-family: $subtitlefont;
+        margin: 0 auto;
+        border-left: 2px solid black;
+        // vertical-align: auto;
+        span {
+            // margin: 1/0px;
+            background-color: white;
+        }
+    }
+}
+
+.pgImage {
+    display:flex;
+    flex: 1 1 50%;
+    flex-flow: column nowrap;
+    padding: 20px;
+    align-items: flex-end;
+    // border: 3px solid saddlebrown;
+    img {
+        height: auto;
+        // transform: scale(1.2);
+        width: 250px;
+        object-fit: cover;
+        padding-bottom: 120px;
+    }
+}
+
+.pgWord {
+    box-sizing: border-box;
+    // border:3px solid olive;
+    flex: 1 1 50%;
+    // height: 100vh;
+    padding: 20px 0 20px 20px;
+        p:not(:nth-child(1)) {
+            padding-top: 70px;
+        }
+    }
+
+    .pgMore {
+        // padding: 200px 10px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        div {
+            height:200px;
+            background-image: url('../Media/pokemon_detective.jpg');
+            background-size: cover;
+            background-position: 50% 0;
+            width: 200px;
+            border:3px solid yellow;
+        }
+    }
