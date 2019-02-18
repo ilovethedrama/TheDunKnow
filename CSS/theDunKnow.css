@@ -16,10 +16,20 @@ body {
   padding-top: 1%;
 }
 .titleMain span {
-  padding-top: 50px;
-  transition: 5s;
+  transition: all 0.5s;
 }
-.titleMain span:hover {
+.titleMain span span:nth-child(2) {
+  transition-delay: 0.1s;
+  color: grey;
+}
+.titleMain span span:nth-child(3) {
+  transition-delay: 0.2s;
+  color: green;
+}
+.titleMain span span:nth-child(4) {
+  transition-delay: 0.3s;
+}
+.titleMain span:hover span {
   font-family: "Bowlby One SC", cursive;
 }
 
@@ -356,6 +366,97 @@ footer {
   nav {
     overflow: hidden;
   }
+}
+.pgKingContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.pgKingContainer > * {
+  box-sizing: border-box;
+}
+
+.pgWordContainer {
+  border-top: 2px solid black;
+  overflow-y: scroll;
+  display: flex;
+  height: 50vh;
+}
+
+.pgImgLeft {
+  flex: 1 1 50%;
+}
+.pgImgLeft img {
+  object-position: -70px -50px;
+  object-fit: cover;
+  height: 100vh;
+  width: 50vw;
+  padding: 0 50px 0 0;
+  box-sizing: border-box;
+}
+
+.pgContent {
+  flex: 1 1 50%;
+  overflow-y: none;
+}
+
+.pgTitle {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  position: relative;
+  right: 150px;
+  padding: 0 20px 20px 20px;
+  flex: 1 1 auto;
+  font-size: 4rem;
+  font-family: "Cormorant Garamond", serif;
+  box-sizing: border-box;
+  background-color: white;
+}
+.pgTitle h4 {
+  padding: 10px 0 0 10px;
+  font-size: 1.2rem;
+  font-family: "Bowlby One SC", cursive;
+  margin: 0 auto;
+  border-left: 2px solid black;
+}
+.pgTitle h4 span {
+  background-color: white;
+}
+
+.pgImage {
+  display: flex;
+  flex: 1 1 50%;
+  flex-flow: column nowrap;
+  padding: 20px;
+  align-items: flex-end;
+}
+.pgImage img {
+  height: auto;
+  width: 250px;
+  object-fit: cover;
+  padding-bottom: 120px;
+}
+
+.pgWord {
+  box-sizing: border-box;
+  flex: 1 1 50%;
+  padding: 20px 0 20px 20px;
+}
+.pgWord p:not(:nth-child(1)) {
+  padding-top: 70px;
+}
+
+.pgMore {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.pgMore div {
+  height: 200px;
+  background-image: url("../Media/pokemon_detective.jpg");
+  background-size: cover;
+  background-position: 50% 0;
+  width: 200px;
+  border: 3px solid yellow;
 }
 
 /*# sourceMappingURL=theDunKnow.css.map */
