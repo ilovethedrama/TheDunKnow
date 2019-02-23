@@ -16,19 +16,19 @@ body {
 }
 
 .titleMain {
-    // border: 2px solid yellow;
     padding:0px 10px;
     color: black;
-    // width:150ox;
     height:100px;
     font: 3.5rem $alternatemainfont;
     line-height: .7rem;
     span {
         font: 2.3rem $subtitlefont;
-
     }
 }
 
+.titleMainBox {
+    min-width:220px;
+}
 
 ////// SEXY TAB INFO
 .showcase {
@@ -56,7 +56,6 @@ body {
     width: 100%;
 	
 	li {
-		// float: left;
 		line-height: 38px;
 		overflow: hidden;
 		padding: 5px;
@@ -82,12 +81,16 @@ body {
 	}
 }
 
+.burgerMenu {
+    display:none;
+}
+
 .tabs_item {
 	display: none;
-    padding: 30px ;
+    padding: 30px;
 
 	h4 {
-		font-weight: bold;;
+		font-weight: bold;
         font-family: $mainfont;
         font-size: 1.5rem;
         color: black;
@@ -231,10 +234,8 @@ footer {
 
 
 nav {
-    box-sizing: border-box;
     padding: 0px 20px 0px 20px;
     display: flex;
-    // height: 100px;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: center;
@@ -244,16 +245,19 @@ nav {
     position: relative;
     width: 100%;
     overflow:hidden;
-    z-index: 10000;
+    z-index: 1000;
 }
 
 
 .navContent {
-    width: 100%;
-            border-left: 3px solid black;
+            // padding: 10px 0px;
+            width: 100%;
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-around;
+            i {
+                display:none;
+            }
             a, h4 {
                 padding: 5px;
                 border: 2px solid transparent;
@@ -282,6 +286,7 @@ nav {
 @mixin hoverUnderline() {
     transition: .3s ease;
     border-bottom: 2px solid yellow;
+    border-top: 2px solid yellow;
 }
 
 .navContent a:hover {
@@ -316,10 +321,11 @@ nav {
     transition: .4s;
     a, h4, h1 {
         color: white;
-        // padding: 0px 10px;
-        &:hover {
-            background-color: black;
-        }
+    }
+    .burgerMenu {
+        color:white;
+        font-size: 1.5rem;
+        padding-left: 70px;
     }
 }
 
@@ -333,108 +339,12 @@ nav {
     padding-top: 65px;
 }
 
-.hideme
-{
+.hideme {
     opacity:0;
 }
 
 
 
-///// MEDIA QUERIES
-
-@media (max-width: 1155px) {
-    .featureHeading {
-        width: 270px;
-        height: 150px;
-        font-size: .8rem;
-    }
-
-    .feature {
-        height:375px;
-        width:550px;
-    }
-
-    .hero {
-        .heroMain {
-            aside {
-                h2 {
-                    font-size: 1.2rem;
-                    transition: .4s ease;
-                }
-            }
-
-        }
-    }
-
-            .heroMiniFeat {
-                img {
-                    height:150px;
-                    width: 150px;
-                    transition: .4s ease;
-                }
-            }
-}
-
-@media (max-width: 1040px) {
-   
-        aside {
-            p {
-                display: none;
-            }
-        }
-  
-                .heroMiniFeat {
-                    img {
-                        height:200px;
-                        width: 300px;
-                        transition: .4s ease;
-                    }
-                }
-
-.hero {
-    .heroMain {
-        .mainHeading {
-            h2 {
-                &:after {
-                    border: none;
-                    content:'';
-                }
-            }
-        }
-
-    }
-}
-}
-
-@media (max-width: 835px) {
-    .heroMain {
-       flex-flow: column wrap;
-       transition: .4s ease;
-    }
-
-    .hero .heroMain .mainHeading { 
-        height: 150px;
-        transition: .4s ease;
-    }
-}
-
-@media (max-width: 700px) {
-    header h1 {
-        order:1;
-    }
-    header #search {
-        order: 2;
-    }
-
-    header #subscribe {
-        order:3;
-    }
-
-    nav {
-        overflow: hidden;
-    }
-    
-}
 
 /////////////////featureLayout
 
@@ -551,7 +461,7 @@ nav {
             border:3px solid yellow;
         }
     }
-
+    
 
     .imprint {
         overflow: hidden;
@@ -568,44 +478,12 @@ nav {
             background-color: gray;
         }
     }
-    @media (max-width: 1050px) {
-        .pgTitle {
-            right: 0;
-            font-size: 3rem;
-            h4 {
-                font-size: .9rem;
-            }
-        }
-        .navContent {
-            a, h4 {
-            display:none;
-            }
-        }   
-    }
-
-    @media (max-width: 865px) {
-        .pgKingContainer {
-            flex-flow: column wrap;
-        }
-
-        .pgImgLeft {
-            flex: 1 1 100%;
-            img {
-                object-position: 0 20%;   
-                object-fit: cover;
-                height:50vh;
-                width: 100vw;
-                padding: 0px;
-                box-sizing: border-box;
-            }
-        }
-    }
-
+    
     ////////////Standard Article
     .stContents {
         padding: 20px 80px;
     }
-
+    
     .stMain {
         display: flex;
         flex-flow: row wrap;
@@ -613,8 +491,8 @@ nav {
         height: auto;
         padding-bottom: 30px;
     }
-
-
+    
+    
     .stMainTitle {
         font-size: 2.5em;
         flex: 1 1 400px;
@@ -632,7 +510,7 @@ nav {
             background:black;
         }
     }
-     
+    
     .stMainImg {
         display: flex;
         position: relative;
@@ -663,8 +541,8 @@ nav {
     }
 
     .stInfo {
-     text-align:center;
-     p {
+        text-align:center;
+        p {
             margin: auto;
             width: 60%;
             min-width: 60%;
@@ -674,7 +552,7 @@ nav {
             text-align: left;
             font-size: 1rem;
         }
-       img {
+        img {
             padding-bottom: 30px;
             margin: auto;
             flex: 1 400px;
@@ -682,7 +560,7 @@ nav {
             height:400px;
         }
     }
-
+    
     .stBlockQuote {
         margin: 0 auto; 
         width: 60%;  
@@ -698,7 +576,7 @@ nav {
             }
         }
     }
-
+    
     .stBaseline {
         width: 100%;
         position: relative;
@@ -740,14 +618,60 @@ nav {
             }
         }
     }
+    
+    ///// MEDIA QUERIES
+    
+    @media (max-width: 700px) {
+        
+        nav {
+            overflow: hidden;
+        }
 
-    @media (max-width:1215px) {
-        .stBlockQuote {
+        .stMainTitle {
+            font-size: 1.3rem;
+        }
+        .stInfo {
             p {
-                font: 1.7rem $alternatemainfont;
+                width:100%;
+            }
+        }  
+        .stContents {
+            padding: 20px;
+        }
+        
+    }
+  
+    @media (max-width: 835px) {
+        .heroMain {
+           flex-flow: column wrap;
+           transition: .4s ease;
+        }
+    
+        .hero .heroMain .mainHeading { 
+            height: 150px;
+            transition: .4s ease;
+        }
+    }
+    
+
+    @media (max-width: 865px) {
+        .pgKingContainer {
+            flex-flow: column wrap;
+        }
+        
+        .pgImgLeft {
+            flex: 1 1 100%;
+            img {
+                object-position: 0 20%;   
+                object-fit: cover;
+                height:50vh;
+                width: 100vw;
+                padding: 0px;
+                box-sizing: border-box;
             }
         }
     }
+
 
     @media (max-width:1000px) {
         .stBlockQuote {
@@ -767,19 +691,92 @@ nav {
         }
     }
 
-    @media (max-width:700px) {
-        .stMainTitle {
-            font-size: 1.3rem;
-        }
-        .stInfo {
-            p {
-                width:100%;
+    @media (max-width: 1040px) {
+       
+        .navContent {
+            border-left: none;
+            border: 1px solid black;
+            display:flex;
+            h4, a {
+            display:none;
             }
-        }  
-        .stContents {
-            padding: 20px;
+        }   
+        
+        .burgerMenu {
+            display:inline-block;
+            font-size: 1.5rem;
+            padding-left: 70px;
+        }
+        
+            aside {
+                p {
+                    display: none;
+                }
+        }
+      
+        .heroMiniFeat {
+                img {
+                    height:200px;
+                    width: 300px;
+                    transition: .4s ease;
+                    }
+        }
+    
+        .hero {
+            .heroMain {
+                .mainHeading {
+                    h2 {
+                        &:after {
+                            border: none;
+                            content:'';
+                        }
+                    }
+                }
+            }
         }
     }
+    
+    @media (max-width: 1050px) {
+        .pgTitle {
+            right: 0;
+            font-size: 3rem;
+            h4 {
+                font-size: .9rem;
+            }
+        }
+    }
+    
+    @media (max-width: 1155px) {
+        .featureHeading {
+            width: 270px;
+            height: 150px;
+            font-size: .8rem;
+        }
+    
+        .feature {
+            height:375px;
+            width:550px;
+        }
+    
+        .hero {
+            .heroMain {
+                aside {
+                    h2 {
+                        font-size: 1.2rem;
+                        transition: .4s ease;
+                    }
+                }
+            }
+        }
+    
+        .heroMiniFeat {
+            img {
+                height:150px;
+                width: 150px;
+                transition: .4s ease;
+            }
+        }
+}
 
     @media (max-width:1200px) {
         .navContent {
@@ -788,4 +785,12 @@ nav {
                         font-weight: 900;
                     }
                 }        
+            }
+
+    @media (max-width:1215px) {
+                .stBlockQuote {
+                    p {
+                        font: 1.7rem $alternatemainfont;
+                    }
+                }
     }
