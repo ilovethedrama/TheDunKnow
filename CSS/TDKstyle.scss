@@ -1,3 +1,5 @@
+
+
 /////// VARIABLES
 
 $mainfont: 'Cormorant Garamond', serif;
@@ -208,6 +210,14 @@ footer {
     }
 }
 
+.sectionHeading {
+    font: 2rem $alternatemainfont;  
+    text-align: center;
+    padding: 10px;
+    span{
+        font-family: $subtitlefont;
+    }
+}
 
 //  .heroMiniFeat:not(:hover){
 //     opacity: .75;
@@ -359,6 +369,9 @@ nav {
     padding: 40px 16px 0px 16px;
     display:flex;
     flex-flow: row wrap;
+
+    transition: margin-left .5s;
+    padding: 20px;
 }
 
 .sticky + .content {
