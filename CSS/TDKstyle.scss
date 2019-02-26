@@ -19,15 +19,34 @@ body {
     padding:0px 10px;
     color: black;
     height:100px;
-    font: 3.5rem $alternatemainfont;
+    font: 5rem $alternatemainfont;
     line-height: .7rem;
     span {
-        font: 2.3rem $subtitlefont;
+        font: 3.3rem $subtitlefont;
     }
 }
 
 .titleMainBox {
-    min-width:220px;
+    text-align:center;
+    height: 150px;
+    // border:2px solid pink;
+}
+
+.titleMainMini {
+    // padding:0px 10px;
+    color: black;
+    // color: transparent;
+    height:70px;
+    font: 2.5rem $alternatemainfont;
+    line-height: .9rem;
+    span {
+        line-height: .9rem;
+        font: 1.6rem $subtitlefont;
+    }
+}
+
+.titleMainBoxMini {
+    min-width:120px;
 }
 
 ////// SEXY TAB INFO
@@ -79,6 +98,10 @@ body {
         transition: all 0.2s ease-in-out;
 		border-bottom: 1px solid grey;
 	}
+}
+
+.searchIcon {
+    display:none;    
 }
 
 .burgerMenu {
@@ -251,7 +274,7 @@ nav {
 
 .navContent {
             // padding: 10px 0px;
-            width: 100%;
+            width: 80%;
             display: flex;
             flex-flow: row nowrap;
             justify-content: space-around;
@@ -318,7 +341,7 @@ nav {
     top: 0;
     width: 100%;
     background-color: black;
-    transition: .4s;
+    transition: .5s;
     a, h4, h1 {
         color: white;
     }
@@ -330,13 +353,13 @@ nav {
 }
 
 .content {
-    padding: 16px;
+    padding: 40px 16px 0px 16px;
     display:flex;
     flex-flow: row wrap;
 }
 
 .sticky + .content {
-    padding-top: 65px;
+    padding-top: 100px;
 }
 
 .hideme {
@@ -781,8 +804,8 @@ nav {
     @media (max-width:1200px) {
         .navContent {
                     a, h4 {
-                        font: .8rem $alternatemainfont;
-                        font-weight: 900;
+                        // font: .8rem $alternatemainfont;
+                        // font-weight: 900;
                     }
                 }        
             }
