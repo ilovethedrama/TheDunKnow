@@ -55,8 +55,9 @@ body {
 }
 
 .titleMainMini {
-    // padding:0px 10px;
+    // padding:0px 20px;
     color: black;
+
     // color: transparent;
     height:70px;
     font: 2.5rem $alternatemainfont;
@@ -68,6 +69,7 @@ body {
 }
 
 .titleMainBoxMini {
+    // padding-left:20px;
     min-width:120px;
 }
 
@@ -122,49 +124,28 @@ body {
 	}
 }
 
-.searchIcon {
-    display:none;    
-}
-
-
-
-.tabs_item {
-	display: none;
-    padding: 30px;
-
-	h4 {
-		font-weight: bold;
-        font-family: $mainfont;
-        font-size: 1.5rem;
-        color: black;
-	}
-
-	img {
-		width: 250px;
-        float: left;
-        height: 250px;
-        object-fit: cover;
-		margin-right: 30px;
-	}
-
-    &:first-child {display: block;}
-    
-
-}
-
-.current a {
-    font-family: $mainfont;
-	color: #fff;
-	background: black;
-}
-
-
 
 
 footer {
     height:100%;
 }
 
+.sectionContainer {
+    text-align: center;
+    justify-content: space-evenly;
+    width:100%;
+    align-items: flex-start;
+}
+
+.bumpImgUp {
+    object-position: 0 -100px;
+    object-fit: contain;
+}
+
+.bumpImgDown {
+    object-position: 0 -110px;
+    object-fit: cover;
+}
 
 ////// HERO SECTION
 .hero {
@@ -176,26 +157,29 @@ footer {
     // margin-top: 50px;
     color: black;
     .heroMain {
-        a {
-            max-height: 400px;
-            padding: 0;
-            // @include highlightMe();
-        }
         height: auto;
         // box-sizing: border-box;
         display: flex;
         justify-content: center;
         // align-items: flex-end;
         padding-bottom: 40px;
+        a {
+            max-height: 400px;
+            padding: 0;
+            width: 100%;
+            // @include highlightMe();
             img {
+                // uncomment this and comment out min width and height for a poss improved layout
+                // flex:1 1 700px;
                 width: 100%;
                 height: 400px;
                 object-fit: cover;
             }
+        }
             .mainHeading {
                 height:400px;
                 position: relative;
-                width: 100%;
+                width: 60%;
                 background-color: white;
                 &:hover {
                     background-color:rgba(219, 219, 219, 1);
@@ -238,12 +222,17 @@ footer {
 .sectionHeading {
     font: 2rem $alternatemainfont;  
     text-align: center;
-    padding: 10px;
     span{
         font-family: $subtitlefont;
     }
 }
 
+.sectionTag {
+    font: 1rem $genericbody;  
+    text-align: center;
+    padding-bottom: 40px;
+    
+}
 //  .heroMiniFeat:not(:hover){
 //     opacity: .75;
 //   }
@@ -253,18 +242,18 @@ footer {
 .heroSecond {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: auto;
-
 } 
 
-        .heroMiniFeat {
-            box-sizing: border-box;
+.heroMiniFeat {
+    // box-sizing: border-box;
+    box-sizing: content-box;
             border-top: 1px solid rgb(177, 173, 173);
             height: auto;
             width: auto;
             position: relative;
-            margin: 0 20px 20px 20px;
+            margin-bottom: 20px;
             display:flex;
             transition: .5s ease;
             &:first-child .miniHeading p :after{
@@ -279,8 +268,8 @@ footer {
             img {
                 object-fit: cover;
                 padding: 20px 0 0 0;
-                width: 70px;
-                height: 70px;
+                width: 100px;
+                height:130px;
             }
             .miniHeading {
                 box-sizing: border-box;
@@ -297,7 +286,7 @@ footer {
         }
 
 nav {
-    padding: 0px 20px 0px 20px;
+    // padding: 0px 20px 0px 20px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
@@ -318,7 +307,7 @@ nav {
             width: 80%;
             display: flex;
             flex-flow: row nowrap;
-            justify-content: space-around;
+            justify-content: space-between;
             i {
                 display:none;
             }
@@ -343,9 +332,18 @@ nav {
 
 
 
+    #searchClick {
+        opacity: 0.5; 
+    }
 
+    // #search:hover {
+        // opacity:.50;
+        // @include highlightMe();
+    // }
 
-
+#searchClick:hover {
+    opacity:1;
+}
 
 
 
@@ -680,6 +678,8 @@ nav {
             }
         }
     }
+
+    
     
     ///// MEDIA QUERIES
     
@@ -711,6 +711,7 @@ nav {
         .hero .heroMain .mainHeading { 
             height: 150px;
             transition: .4s ease;
+            width:100%;
         }
     }
     
@@ -851,11 +852,16 @@ nav {
         }
     
         .heroMiniFeat {
+            margin:10px;
             img {
                 height:150px;
                 width: 150px;
                 transition: .4s ease;
             }
+        }
+
+        .heroSecond {
+            justify-content: center;
         }
 }
 
@@ -881,6 +887,7 @@ nav {
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
+
 
 
 
