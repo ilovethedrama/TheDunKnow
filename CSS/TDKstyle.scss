@@ -405,6 +405,19 @@ nav {
  
 }
 
+.sticky1 {
+    position:fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    background-color: black;
+    transition: all .5s linear;
+    h1, .nav-item, i {
+        color: white;
+    }
+ 
+}
+
 .content {
     padding: 0px 20px;
     display:flex;
@@ -476,7 +489,7 @@ nav {
 }
 
 .scrollTitle {
-    display:none;
+    // display:none;
 }
 
 .scrollTitleStick {
@@ -525,35 +538,66 @@ nav {
     }
 }
 
-.ftImgLg {
+.ftImg {
     position: absolute;
     z-index: -1;
+}
+
+.ftImgLg {
     right: 0;
     top: 5%;
     img {
-        height:500px;
+        height:400px;
+        width:400px;
     }
 }
 
 .ftImgSm {
-    position: absolute;
     top: 5%;
-    left: 5%;
-    z-index: -1;
+    left: 0%;
     img {
         height:300px;
     }
 }
 
 .ftImgMd {
-    position: absolute;
-    top: 30%;
-    right: 5%;
-    z-index: -1;
+    top: 22%;
+    left: 10%;
     img {
         height:400px;
     }
 }
+
+.ftImgXs {
+    top: 15%;
+    left: 17%;
+    z-index: 0;
+    img {
+        height: 150px;
+    }
+}
+
+.ftImgXl {
+    right: 0;
+    bottom: 10%;
+    img {
+        object-fit: cover;
+        width:400px;
+        height:300px;
+    }
+}
+
+// .ftrPix {
+
+//     div:nth-of-type(4) {
+//         img {
+//             @include highlightMe(); 
+//             top: 0;
+//             position: absolute;
+//             right:0;
+//         }
+//     }
+// }
 
 .pgTitle {
     margin-top:30px;
@@ -787,6 +831,7 @@ nav {
     
     ///// MEDIA QUERIES
     @media (max-width:660px ) {
+
         .hero {
             .heroMain {
                 .mainHeading {
@@ -799,7 +844,12 @@ nav {
     }
 
     @media (max-width: 700px) {
-        
+        .ftImg {
+            img {
+                opacity: 0;
+                transition: .4s ease;
+            }
+        }
         nav {
             overflow: hidden;
         }
