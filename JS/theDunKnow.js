@@ -1,5 +1,7 @@
 window.onscroll = function() {
-  navBarStick()
+  navBarStick();
+  titleStick();
+
 };
 
 // Get the navbar
@@ -14,15 +16,22 @@ var sticky1 = headingTitle.offsetTop;
 function navBarStick() {
   if (window.pageYOffset >= sticky) {
     navbar.classList.add("sticky");
-    headingTitle.classList.add("sticky1");
     console.log('sticky added');
   } else {
     navbar.classList.remove("sticky");
-    headingTitle.classList.remove("sticky1");
     console.log('sticky removed');
   }
 }
 
+function titleStick() {
+  if (window.pageYOffset >= 900) {
+    headingTitle.classList.add("sticky");
+    console.log('sticky added');
+  } else {
+    headingTitle.classList.remove("sticky");
+    console.log('sticky removed');
+  }
+}
 
 
 $(function(){  // $(document).ready shorthand
