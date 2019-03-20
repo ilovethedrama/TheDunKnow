@@ -895,6 +895,18 @@ nav {
     
     ///// MEDIA QUERIES
     @media (max-width:660px ) {
+        .ftTitle {
+            font-size: 1.5em;
+        }
+
+        .scrollTitle {
+            padding:0;
+            position: relative;
+        }
+
+        .hideme {
+            opacity:1;
+        }
 
         .hero {
             .heroMain {
