@@ -25,6 +25,11 @@ $genericbody: 'Montserrat', sans-serif;
     border-top: 2px solid yellow;
 }
 
+@mixin whiteHover() {
+    color:rgba(219, 219, 219, 1);
+    transition: .5s;
+}
+
 ////THE MEAT
 
 * {
@@ -73,12 +78,6 @@ body {
     a {
         text-decoration: none;
     }
-}
-
-
-
-footer {
-    height:100%;
 }
 
 .sectionContainer {
@@ -153,12 +152,12 @@ footer {
         transition: .5s;
     }
     h2 {
-        height:100%;
-        // padding: 0px 50px;
+        // height:100%;
+        padding: 20px;
         // align-self: center;
         // padding-bottom: 40px;
         align-self: center;
-        top: 33%;
+        // top: 33%;
         left: 0;
         font-size: 1.4rem;
         text-align: center;
@@ -174,17 +173,17 @@ footer {
         }
     }
         p {
-                position: absolute;
-                bottom:10%;
-                left:65%;
-                font-family: $mainfont;
-                text-align: center;
-                span {
-                    font-family: $subtitlefont;
-                font-size: .8rem;                          
-                text-align: right;
-                }
+            position: absolute;
+            bottom:10%;
+            left:65%;
+            font-family: $mainfont;
+            text-align: center;
+            span {
+                font-family: $subtitlefont;
+            font-size: .8rem;                          
+            text-align: right;
             }
+        }
 }
 
 .sectionHeading {
@@ -345,12 +344,82 @@ nav {
             }
       }
       
-        footer {
-            display: flex;
+
+        .footerChunk {
+            align-items: flex-start;
+            // margin-right: 40px;
+            height: 100%;
+            // width:15%;
+            // @include highlightMe();
+            padding-right: 30px;
+            padding-bottom: 30px;
+            flex: 1 1 200px;
+            li {
+                border-right: 2px solid rgba(83, 83, 83, .4);
+            a {
+                &:hover {
+                @include whiteHover();
+            }
+
+            }
+            }
+
+        }
+        
+        .socialSection {
+            flex: 1 1 auto;
         }
 
-
+        .theRow {
+            display:flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+            // @include highlightMe();
+            border-right:none;
+        }
         
+        .stFooterContent {
+            padding:20px;
+            display: flex;
+            flex-flow: row wrap;
+            position: absolute;
+            // @include highlightMe();
+            background:grey;
+            top: 0%;
+            left: 0;
+            color: #000;
+            font: .7rem $genericbody;
+            list-style-type: none;
+            margin: 0 auto;
+            width: 100%;
+            // height: auto;
+            justify-content: left;
+            ul {
+                list-style-type: none;
+            }
+            li {
+                a {
+                    text-decoration: none;
+                    color:black;
+                }
+                text-align: left;
+                // @include highlightMe();
+                padding:10px;
+                font-size: .8rem;
+                width:100%;
+                &:first-child {
+                    font-weight: bold;
+                    font-size: 1rem;
+                }
+                &:hover {
+                    transition: .3s ease;
+                    color: white;
+                }
+            }
+        }
+    
+
+
     .burgerClick, .fa-bars {
         display:none;
     }
@@ -803,10 +872,11 @@ nav {
         }
     }
     
+
     .stBaseline {
         width: 100%;
         position: relative;
-        background: grey;
+        // background: grey;
         display:flex;
         flex-flow: column wrap;
         justify-content: center;
@@ -820,28 +890,6 @@ nav {
         }
     }
 
-    .stFooterContent {
-        display: flex;
-        flex-flow: column wrap;
-        position: absolute;
-        top: 0%;
-        left: 0;
-        color: #000;
-        font: .7rem $genericbody;
-        list-style-type: none;
-        margin: 0 auto;
-        width: 100%;
-        height: 300px;
-        justify-content: space-evenly;
-        li {
-            text-align: center;
-            padding: 20px 5px;
-            &:hover {
-                transition: .3s ease;
-                color: white;
-            }
-        }
-    }
 
     
     
