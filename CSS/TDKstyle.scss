@@ -228,10 +228,12 @@ body {
 } 
 
 .viewMoreButton {
+    width:120px;
+    text-align: center;
     font: 1rem $alternatemainfont;
     border: 2px solid transparent;
     padding: 10px;
-    // margin-bottom:100px;
+    margin:0 auto;
     a {
         color: rgb(0, 0, 0);
         text-decoration: none;
@@ -672,17 +674,6 @@ nav {
     }
 }
 
-// .ftrPix {
-
-//     div:nth-of-type(4) {
-//         img {
-//             @include highlightMe(); 
-//             top: 0;
-//             position: absolute;
-//             right:0;
-//         }
-//     }
-// }
 
 .pgTitle {
     margin-top:30px;
@@ -710,9 +701,7 @@ nav {
         font-family: $genericbody;
         margin: 0 auto;
         border-left: 2px solid black;
-        // vertical-align: auto;
         span {
-            // margin: 1/0px;
             background-color: white;
         }
     }
@@ -889,19 +878,361 @@ nav {
             object-fit: cover;  
         }
     }
+    
+.pgVidContainer {
+    // padding: 100px;
+    background: linear-gradient(180deg, rgb(179, 179, 179) 400px, #FFFF 0%);
+}
 
+.vidContainer {
+    width:100%;
+}
+.vidElement {
+        video {
+            width:100%;
+        }
+        // @include highlightMe();
+    }
+    
 
+    .vidHeading {
+        margin-top: 50px;   
+        font: 1.2rem $genericbody;  
+        padding-bottom: 10px;
+        text-align: left;
+        width:100%;
+        span{
+            font-family: $subtitlefont;
+        }
+    }
+
+    .vidsectionContainer {
+        display:flex;
+        flex-flow: column wrap;
+        text-align: left;
+        justify-content: space-evenly;
+        width:100%;
+        height:100%;
+        margin-bottom: 50px;
+        // @include highlightMe();
+        &:nth-child(1) {
+            padding-bottom: 100px;
+        }
+    }
+
+    .vidDeets {
+        min-height: 250px;
+        width: 60%; 
+        font: 1rem $genericbody;
+        h2 {
+            padding: 15px 0px;
+        }
+        p {
+
+            line-height: 1.8rem;
+        }
+    }
+    
+    .vidNav {
+        padding: 10px;
+        align-self: center;
+        height:100%;
+        a {
+            color:black;
+            text-decoration: none;
+        }
+    }
     
     
+    .playButtonLg {
+        width:auto;
+        position: absolute;
+        top:50%;
+        left:50%;
+        color: yellow;
+        //without this the button would be in the center 
+        //but as the origin point is by default the top left it would be a little off
+        transform: translate3d(-50%, -50%, 0); 
+    }
+
+
+    .vidWatchLabel {
+        position: absolute;
+        background: rgba(169, 169, 169, .6);
+        width: auto;
+        height:auto;
+        bottom: 4px;
+        padding: 5px;
+        left:0;
+        text-align: left;
+        font: 1rem $genericbody;
+        font-weight: 900;
+        color: #000;
+        text-transform:uppercase;
+        i {
+            color: yellow;
+        }
+    }
+
+    .vidInvite:hover + .vidTime {
+        // @include highlightMe();
+        opacity:1;
+    }
+    
+    .vidTime {
+        visibility: hidden;
+    }
+
+    .vidWatchLabelBox {
+        display:block;
+        position: relative;
+        p { 
+            display:inline;
+        }
+    }
+
+    .vidheroMiniFeat {
+        a {
+            text-decoration: none;
+        }
+        text-align: center;
+        // flex: 1 1 200px;
+        width:auto;
+        height: auto;
+        margin: 0px 5px;
+        position: relative;
+        display:flex;
+        flex-flow:column nowrap;
+        transition: .5s ease;
+            &:first-child .miniHeading p :after{
+                content:' New - 3 Minute Read ';
+                font-family: $genericbody;
+                color:red;
+                display:block;
+                font-weight: bold;
+            }
+            &:not(:hover) {
+                opacity: .75;
+            }
+            &:hover {
+                background: yellow;
+            }
+            img {
+                object-fit: cover;
+                width:200px;
+                height:200px;
+            }
+            .miniHeading {
+                position: relative;
+                height:100%;
+                // width: 100%;
+                width: 200px;
+                padding: 5px;
+                font-family: $mainfont;
+                font-size: .75rem;
+                p {
+                    padding-top: 15px;
+                    font-family: $genericbody;
+                }
+            }
+        }
+    
+        .extraVidSection {
+            // width:100%;
+            display:flex;
+            // margin-top:50px;
+            // @include highlightMe();
+            // margin-left: 300px;
+        }
+        
+        .theMenuFix {
+            height: auto;
+            margin-right:20px;
+            padding-left:10px;
+            text-align:center;
+            font: .8rem $genericbody;
+            ul {
+                list-style-type: none;
+            }
+            h3 {
+                padding:20px 0px;
+                font-family: $alternatemainfont;
+                span {
+                    font-family: $subtitlefont;
+                    letter-spacing: .2rem;
+                }
+            }
+            li {
+                padding:5px;
+                min-height: 60px;
+            }
+        }
+
+        .fixedMenu {
+            max-width: 400px;
+            min-width: 200px;
+            margin-right: 15px;
+            padding-left: 30px;
+            border: 2px solid grey;
+            height:100%;
+            position:sticky;
+            top:100px;
+            z-index: 1;
+            box-shadow: 5px 10px 18px #888888;
+            // @include highlightMe();
+            // margin-right:10px;
+        }
+        
+        .extraVid {
+            margin: 0 auto; 
+            display: flex;
+            flex-flow:row wrap;
+            justify-content:center;
+            // @include highlightMe();
+            // width: 1000vw;
+            width:100%;
+        }
+
+        .ttEntry {
+            position:relative;
+            // @include highlightMe();
+            // background-image: url('../Media/desus and mero.jpg');
+            // background-size:cover;
+            
+            img {
+                object-fit: contain;
+                position: absolute;
+                top:0;
+                left:0;
+                @include highlightMe();
+                // width: 100px;
+                // height: 30px;
+                overflow: hidden;
+            }
+        }
+        
+        .vidContent {
+            position:relative;
+            video {
+                height:450px;
+            }
+        }
+
+        .vidHero {
+            margin-top:50px;
+            position: relative;
+            border: transparent;
+            display:flex;
+            width: 100%;
+            align-self: flex-start;
+            color: black;
+            height: auto;
+        }
+
+        .vidheroMain {
+            align-self: flex-end;
+            width:100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            a {
+                max-height: 450px;
+                padding: 0;
+                width: 100%;
+                overflow: hidden;
+                img {
+                    // uncomment this and comment out min width and height for a poss improved layout
+                    // flex:1 1 700px;
+                    width: 100%;
+                    height: 500px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        .vidMainHeading {
+            display: flex;
+            max-height:450px;
+            position: relative;
+            width: 60%;
+            background-color: white;
+            &:hover {
+                background-color:rgba(219, 219, 219, 1);
+                transition: .5s;
+            }
+            h2 {
+                width:100%;
+                padding: 20px;
+                align-self: center;
+                left: 0;
+                font-size: 1.4rem;
+                text-align: center;
+                position: absolute;
+                font-family: $mainfont;
+                &:after {
+                    content: "";
+                    width: 20%;
+                    border-bottom: 2px solid black;
+                    position: absolute;
+                    top: 100%;
+                    left: 40%;
+                }
+            }
+                p {
+                    position: absolute;
+                    bottom:10%;
+                    left:65%;
+                    font-family: $mainfont;
+                    text-align: center;
+                    span {
+                        font-family: $subtitlefont;
+                    font-size: .8rem;                          
+                    text-align: right;
+                    }
+                }
+        }
+        
+        .vidSelection {
+            display:flex;
+            justify-content: space-between;
+            height:auto;
+            width: calc(100% - 80px);
+            // @include highlightMe();
+            overflow: hidden;
+            margin-bottom: 100px;
+        }
+        
+        .vidChoice {
+            flex: 1 1 50px;
+            margin: 5px;
+            video  {
+                width: 200px;
+            } 
+            
+        }
+        
+        .vidHeroSecond {
+            width:100%;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
     ///// MEDIA QUERIES
     @media (max-width:660px ) {
+        main {
+            overflow-x: none;
+        }
+
         .ftTitle {
             font-size: 1.5em;
+            margin-top:0;
         }
 
         .scrollTitle {
             padding:0;
             position: relative;
+            margin-top:0;
         }
 
         .hideme {
