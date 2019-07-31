@@ -3,6 +3,7 @@ const expressSanitizer = require('express-sanitizer'),
     bodyP = require("body-parser"),
     mongoose = require('mongoose'),
     express = require("express"),
+    helmet = require('helmet'),
     port = 3000 || 27017,
 
     app = express();
@@ -12,20 +13,19 @@ mongoose.connect('mongodb://localhost/tdk', {
     useNewUrlParser: true
 });
 
+app.use(helmet())
+app.use(expressSanitizer());
+app.use(methodOvr('_method'));
 app.use(express.static(__dirname + "/views"));
 app.use(express.static(__dirname + "/public"));
-
-app.use(expressSanitizer());
-app.set('view engine', 'ejs');
-app.use(methodOvr('_method'));
-
-
 app.use(bodyP.json());
 app.use(
     bodyP.urlencoded({
         extended: true
     })
 );
+
+app.set('view engine', 'ejs');
 
 
 app.get("/", (req, res) => {
@@ -52,10 +52,19 @@ app.get("/:section/feature/:artist/interview", (req, res) => {
     });
 });
 
+app.get("/a", (req, res) => {
+    res.sendFile("views/theDunKnowStandard.html", {
+        root: __dirname
+    });
+});
+
 
 app.get("*", (req, res) => {
-    res.send("That page doesn't exist");
+    res.render("404", {
+        root: __dirname
+    });
 });
+
 
 
 app.listen(port, () => {
