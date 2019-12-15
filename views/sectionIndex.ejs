@@ -1,0 +1,35 @@
+<% include partials/header %>
+<main class='pgKingContainer  '>
+
+    <section class='sectionContainer'>
+        <div>
+            <h2 id='sectionHead1' class='sectionHeading'>- <span>Fresh</span> Cuts -</h2>
+            <h5 class='sectionTag'>All The News, inc. Phil Ade's advice on balling on a budget and Misty Copeland's
+                love of memes.</h5>
+        </div>
+
+        <div class='heroSecond '>
+
+            <% topicArticles.forEach(function(storyItem){ %>
+
+            <article class='vidheroMiniFeat'>
+                <a href="#">
+                    <h2><%= storyItem['tagline'] %></h2>
+                    <h2><%= storyItem['id'] %></h2>
+                    <h2><%= storyItem['title'] %></h2>
+                </a>
+                <aside class='miniHeading'>
+                    <h2><%= storyItem.topic %></h2>
+                </aside>
+            </article>
+
+            <% }); %>
+
+        </div>
+    </section>
+</main>
+
+
+
+
+<% include partials/footer %>
