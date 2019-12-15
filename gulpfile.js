@@ -1,91 +1,98 @@
 "use strict";
 
-const gulp = require("gulp"),
-    sass = require("gulp-sass"),
-    autoPrefixer = require("gulp-autoprefixer"),
-    browserSync = require("browser-sync").create(),
-    // servz = require('gulp-webserver'),
-    plumber = require("gulp-plumber"),
-    nodemon = require('gulp-nodemon');
+const browserSync = require("browser-sync").create(),
+  autoPrefixer = require("gulp-autoprefixer"),
+  uglifycss = require("gulp-uglifycss"),
+  plumber = require("gulp-plumber"),
+  nodemon = require("gulp-nodemon"),
+  minify = require("gulp-minify"),
+  notify = require("gulp-notify"),
+  sass = require("gulp-sass"),
+  gulp = require("gulp");
 
-var test = async () => {
-    console.log(
-        `
-    sup 
-    sup 
-    sup
-    `
+const scssToCss = () => {
+  return gulp
+    .src("public/CSS/TDKstyle.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(autoPrefixer())
+    .pipe(gulp.dest("public/CSS"))
+    .pipe(
+      browserSync.stream({
+        match: "**/*.css"
+      })
     );
 };
-test.description = "test to make sure gulp works";
-
-var server = {
-    host: 'localhost',
-    port: '3000'
-}
-
-
-
-var scssToCss = () => {
-    return gulp
-        .src("./public/CSS/TDKstyle.scss")
-        .pipe(plumber())
-        .pipe(sass())
-        .pipe(autoPrefixer())
-        .pipe(gulp.dest("./public/CSS/theDunKnow.css"))
-        .pipe(
-            browserSync.stream({
-                match: "**/*.css"
-            })
-        );
-};
-
 scssToCss.description =
-    "changes scss to css and adds autoprefixes for browser support";
+  "changes scss to css and adds autoprefixes for browser support";
 
-var bSync = done => {
-    browserSync.init({
-        server: {
-            baseDir: "app.js"
-        },
-        port: 3000
-    });
-    done();
+const distill = () => {
+  return gulp
+    .src("public/CSS/theDunKnow.css")
+    .pipe(
+      uglifycss({
+        uglyComments: true
+      })
+    )
+    .pipe(gulp.dest("public/CSS"));
 };
+
+let thePausinator;
+
+const holdIt = done => {
+  thePausinator = setTimeout(bSync, 3000);
+  done();
+};
+
+const bSync = () => {
+  browserSync.init({
+    proxy: "localhost:3000",
+    port: 3003,
+    online: true
+  });
+};
+
+const smallerJS = done => {
+  gulp
+    .src("public/JS/theDunKnow.js")
+    .pipe(minify())
+    .pipe(gulp.dest("public/JS/"));
+  done();
+};
+
+smallerJS.description = "minifies your JS file";
 
 bSync.description = "allows for live browser view of file as changes are made";
 
-var watcher = () => {
-    gulp.watch("./public/CSS/TDKstyle.scss").on("change", scssToCss);
-    gulp.watch("views/*.ejs").on("change", browserSync.reload);
+var watcher = done => {
+  gulp.watch("public/CSS/*.scss").on("change", scssToCss);
+  gulp.watch("public/views/**/*.ejs").on("change", browserSync.reload);
+  done();
+};
+watcher.description =
+  "watches both the ejs and scss files and triggers a browser reload or css injection";
+
+const server = function (done) {
+  nodemon({
+    script: "app.js",
+    // this listens to changes in any of these files/routes and restarts the application
+    // watch: ["app.js", "public/views/partials/*.ejs", '/public/CSS/*.scss'],
+    watch: ["app.js", "public/**/*.+(mp4|jpeg|html|scss)"],
+    ext: "js"
+  }).on("restart", () => {
+    gulp
+      .src("app.js")
+    // .pipe(notify("restarting the server file now"));
+  });
+  done();
 };
 
-var server1 = (function () {
-    gulp.src('./') // <-- your app folder
-        .pipe(servz({
-            livereload: true,
-            open: true,
-            port: 3000 // set a port to avoid conflicts with other local apps
-        }));
-});
+/*This starts the server and also browserSync and then watches for 
+changes to the scss files and ejs files and updates the browser if
+ either one changes and also injects css when scss is ListeningStateChangedEvent. SICCKKK */
+gulp.task(
+  "default",
+  gulp.parallel(server, holdIt, gulp.parallel(gulp.series(scssToCss), watcher))
+);
 
-var nodem = async () => {
-    return nodemon({
-        script: './app.js'
-    }).on('start', function () {
-        console.log('restarted');
-    })
-}
-
-
-
-// gulp.task('default', gulp.series(nodem));
-
-// this runs fine 
-gulp.task('sling', gulp.parallel(watcher));
-
-// gulp.task('sling', gulp.parallel(bSync, watcher));
-// this also runs fine, but the server needs to start before sling but also run alongside it at the same time
-
-// gulp.task("default", gulp.series(nodem), gulp.parallel(bSync, watcher));
-// gulp.task('default', gulp.parallel(bSync, watcher), gulp.series(test, scssToCss));
+gulp.task("squeezeJSnCSS", gulp.series(smallerJS, distill));
