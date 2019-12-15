@@ -1,0 +1,37 @@
+<% include partials/header %>
+
+<section class="formCreate__container">
+
+
+    <div>
+        <h2 class='sectionHeading'>- Talk <span>Yo Ish!!</span> -</h2>
+        <h5 class='sectionTag'>Create a new article posting here</h5>
+    </div>
+    <form class='formContent' action="/articles" method="POST">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[title]" id="" placeholder="title">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[author]" id="" placeholder="author">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[image][heroImage][imagePath]" id=""
+            placeholder="hero image">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[image][leftSmallIntroImage][imagePath]"
+            id="" placeholder="left handside image">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[image][rightMedIntroImage][imagePath]"
+            id="" placeholder="right handside image">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[image][topTextImage][imagePath]" id=""
+            placeholder="top text image">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[image][bottomTextImage][imagePath]" id=""
+            placeholder="bottom text image">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[articleSlug]" id=""
+            placeholder="Brief article summary">
+        <label class='formCreate__container--input text__sanserif--standard'>Topics: </label>
+        <select class='formCreate__container--input text__sanserif--standard' name="article[topic]" id="Sections">
+            <option value="The Classics">The Classics</option>
+            <option value="For The Culture">For The Culture</option>
+            <option value="Fresh Cuts">Fresh Cuts</option>
+            <option value="The Courts">The Courts</option>
+        </select>
+        <input class='formCreate__container--input text__sanserif--standard' type="submit" value="submit">
+    </form>
+
+</section>
+
+<% include partials/footer %>

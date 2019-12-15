@@ -1,0 +1,25 @@
+<% include partials/header %>
+
+<section class='formCreate__container'>
+
+
+    <div>
+        <h2 class='sectionHeading'>- Talk <span>Yo (Sectional) Ish!!</span> -</h2>
+        <h5 class='sectionTag'>Create a new section posting here</h5>
+    </div>
+    <form class='formContent' action="/articles/:section/news" method="POST">
+        <input class='text__sanserif--standard formCreate__container--input' type="text" name="section[title]" id="" placeholder="Section title is...">
+        <input class='text__sanserif--standard formCreate__container--input' type="text" name="section[image]" id="" placeholder="Section image here">
+        <input class='text__sanserif--standard formCreate__container--input' type="text" name="section[tagline]" id="" placeholder="Add section tagline here">
+        <label class='text__sanserif--standard formCreate__container--input'>Topics: </label>
+        <select class='formCreate__container--input' name="section[topic]" id="Sections">
+            <option value="The Classics">The Classics</option>
+            <option value="For The Culture">For The Culture</option>
+            <option value="Fresh Cuts">Fresh Cuts</option>
+            <option value="The Courts">The Courts</option>
+        </select>
+        <input class='text__sanserif--standard formCreate__container--input' type="submit" value="Submit">
+    </form>
+
+</section>
+<% include partials/footer %>
