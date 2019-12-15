@@ -1,10 +1,13 @@
-
 /////// VARIABLES
 
-$mainfont: 'Cormorant Garamond', serif;
-$subtitlefont: 'Bowlby One SC', cursive;
-$alternatemainfont: 'Playfair Display SC', serif;
-$genericbody: 'Montserrat', sans-serif;
+$mainfont: 'Cormorant Garamond',
+serif;
+$subtitlefont: 'Bowlby One SC',
+cursive;
+$alternatemainfont: 'Playfair Display SC',
+serif;
+$genericbody: 'Montserrat',
+sans-serif;
 
 ///////MIXINS
 @mixin highlightMe() {
@@ -16,7 +19,7 @@ $genericbody: 'Montserrat', sans-serif;
     z-index: 10000;
     text-align: center;
     padding: 5px;
-    font-family: $mainfont;        
+    font-family: $mainfont;
 }
 
 @mixin hoverUnderline() {
@@ -26,7 +29,7 @@ $genericbody: 'Montserrat', sans-serif;
 }
 
 @mixin whiteHover() {
-    color:rgba(219, 219, 219, 1);
+    color: rgba(219, 219, 219, 1);
     transition: .5s;
 }
 
@@ -40,33 +43,35 @@ $genericbody: 'Montserrat', sans-serif;
 }
 
 body {
-    background-color:rgba(219, 219, 219, 0.5);
+    background-color: rgba(219, 219, 219, 0.5);
 }
 
 .titleMain {
-    padding:0px 10px;
+    padding: 0px 10px;
     color: black;
-    height:100px;
+    height: 100px;
     font: 5rem $alternatemainfont;
     line-height: .7rem;
+
     span {
         font: 3.3rem $subtitlefont;
     }
 }
 
 .titleMainBox {
-    text-align:center;
+    text-align: center;
     height: 150px;
 }
 
 .titleMainMini {
-    padding:0px 20px;
+    padding: 0px 20px;
     color: black;
     min-width: 160px;
     // color: transparent;
-    height:70px;
+    height: 70px;
     font: 2.5rem $alternatemainfont;
     line-height: .9rem;
+
     span {
         line-height: .9rem;
         font: 1.6rem $subtitlefont;
@@ -74,21 +79,24 @@ body {
 }
 
 .titleMainBoxMini {
-    min-width:120px;
-    a {
-        text-decoration: none;
-    }
+    min-width: 120px;
+
+}
+
+a {
+    text-decoration: none;
 }
 
 .sectionContainer {
-    display:flex;
+    display: flex;
     flex-flow: column wrap;
     align-items: center;
     text-align: center;
     justify-content: space-evenly;
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
     margin-bottom: 50px;
+
     // @include highlightMe();
     &:nth-child(1) {
         padding-bottom: 100px;
@@ -111,7 +119,7 @@ body {
     margin-top: 50px;
     position: relative;
     border: transparent;
-    display:flex;
+    display: flex;
     width: 100%;
     // @include highlightMe();
     // min-height: 100vh;
@@ -122,15 +130,17 @@ body {
 
 .heroMain {
     align-self: flex-end;
-    width:100%;
+    width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
+
     a {
         max-height: 450px;
         padding: 0;
         width: 100%;
         overflow: hidden;
+
         img {
             // uncomment this and comment out min width and height for a poss improved layout
             // flex:1 1 700px;
@@ -143,14 +153,16 @@ body {
 
 .mainHeading {
     display: flex;
-    max-height:450px;
+    max-height: 450px;
     position: relative;
     width: 60%;
     background-color: white;
+
     &:hover {
-        background-color:rgba(219, 219, 219, 1);
+        background-color: rgba(219, 219, 219, 1);
         transition: .5s;
     }
+
     h2 {
         // height:100%;
         padding: 20px;
@@ -163,6 +175,7 @@ body {
         text-align: center;
         position: absolute;
         font-family: $mainfont;
+
         &:after {
             content: "";
             width: 20%;
@@ -172,36 +185,40 @@ body {
             left: 40%;
         }
     }
-        p {
-            position: absolute;
-            bottom:10%;
-            left:65%;
-            font-family: $mainfont;
-            text-align: center;
-            span {
-                font-family: $subtitlefont;
-            font-size: .8rem;                          
+
+    p {
+        position: absolute;
+        bottom: 10%;
+        left: 65%;
+        font-family: $mainfont;
+        text-align: center;
+
+        span {
+            font-family: $subtitlefont;
+            font-size: .8rem;
             text-align: right;
-            }
         }
+    }
 }
 
 .sectionHeading {
-    margin-top: 50px;   
-    font: 2rem $alternatemainfont;  
+    margin-top: 50px;
+    font: 2rem $alternatemainfont;
     text-align: center;
-    span{
+
+    span {
         font-family: $subtitlefont;
     }
 }
 
 
 .sectionTag {
-    font: 1rem $genericbody;  
+    font: 1rem $genericbody;
     text-align: center;
     padding-bottom: 40px;
-    
+
 }
+
 //  .heroMiniFeat:not(:hover){
 //     opacity: .75;
 //   }
@@ -225,26 +242,28 @@ body {
     //     top:0;
     //     right:50%;
     // }
-} 
+}
 
 .viewMoreButton {
-    width:120px;
+    width: 120px;
     text-align: center;
     font: 1rem $alternatemainfont;
     border: 2px solid transparent;
     padding: 10px;
-    margin:0 auto;
+    margin: 0 auto;
+
     a {
         color: rgb(0, 0, 0);
         text-decoration: none;
     }
+
     &:hover {
         @include hoverUnderline();
     }
 }
 
 .theBig2 {
-    display:flex;
+    display: flex;
     flex-flow: row wrap;
     flex: 0 2 50%;
     align-items: flex-start;
@@ -269,49 +288,55 @@ body {
     border-top: 1px solid rgb(177, 173, 173);
     height: auto;
     margin: 0px 5px;
-        // max-width: 200px;
-        // @include highlightMe();
-        // padding: 0px 5px;
-        // width: auto;
+    // max-width: 200px;
+    // @include highlightMe();
+    // padding: 0px 5px;
+    // width: auto;
+    position: relative;
+    // margin-bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    transition: .5s ease;
+
+    &:first-child .miniHeading p :after {
+        content: ' New - 3 Minute Read ';
+        font-family: $genericbody;
+        color: red;
+        display: block;
+        font-weight: bold;
+    }
+
+    &:not(:hover) {
+        opacity: .75;
+    }
+
+    &:hover {
+        border-top: 1px solid yellow;
+    }
+
+    img {
+        object-fit: cover;
+        padding: 20px 0 0 0;
+        width: 100%;
+        height: 200px;
+    }
+
+    .miniHeading {
         position: relative;
-        // margin-bottom: 20px;
-        display:flex;
-        flex-flow:column nowrap;
-        transition: .5s ease;
-        &:first-child .miniHeading p :after{
-            content:' New - 3 Minute Read ';
+        height: 100%;
+        width: 100%;
+        // width: 100%;
+        // padding: 20px 0 0 20px;
+        padding: 5px;
+        font-family: $mainfont;
+        font-size: .75rem;
+
+        p {
+            padding-top: 15px;
             font-family: $genericbody;
-            color:red;
-            display:block;
-            font-weight: bold;
-        }
-        &:not(:hover) {
-            opacity: .75;
-        }
-        &:hover {
-            border-top: 1px solid yellow;
-        }
-        img {
-            object-fit: cover;
-            padding: 20px 0 0 0;
-            width:100%;
-            height:200px;
-        }
-        .miniHeading {
-            position: relative;
-            height:100%;
-            width: 100%;
-            // width: 100%;
-            // padding: 20px 0 0 20px;
-            padding: 5px;
-            font-family: $mainfont;
-            font-size: .75rem;
-            p {
-                padding-top: 15px;
-                font-family: $genericbody;
-            }
         }
     }
+}
 
 nav {
     display: flex;
@@ -323,122 +348,133 @@ nav {
     font-size: 1rem;
     position: relative;
     width: 100%;
-    overflow:hidden;
+    overflow: hidden;
     z-index: 1000;
-    padding-right:20px;
+    padding-right: 20px;
 }
 
 
 .navContent {
-        width: 80%;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        i {
-            display:none;
-        }
-        a, h4 {
-            padding: 5px 0px;
-            border: 2px solid transparent;
-            text-decoration: none;
-            color: black;
-            font: 1rem $alternatemainfont;
-            }
-      }
-      
+    width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 
-        .footerChunk {
-            align-items: flex-start;
-            // margin-right: 40px;
-            height: 100%;
-            // width:15%;
-            // @include highlightMe();
-            padding-right: 30px;
-            padding-bottom: 30px;
-            flex: 1 1 200px;
-            li {
-                border-right: 2px solid rgba(83, 83, 83, .4);
-            a {
-                &:hover {
+    i {
+        display: none;
+    }
+
+    a,
+    h4 {
+        padding: 5px 0px;
+        border: 2px solid transparent;
+        text-decoration: none;
+        color: black;
+        font: 1rem $alternatemainfont;
+    }
+}
+
+
+.footerChunk {
+    align-items: flex-start;
+    // margin-right: 40px;
+    height: 100%;
+    // width:15%;
+    // @include highlightMe();
+    padding-right: 30px;
+    padding-bottom: 30px;
+    flex: 1 1 200px;
+
+    li {
+        border-right: 2px solid rgba(83, 83, 83, .4);
+
+        a {
+            &:hover {
                 @include whiteHover();
             }
 
-            }
-            }
-
         }
-        
-        .socialSection {
-            flex: 1 1 auto;
-        }
-
-        .theRow {
-            display:flex;
-            flex-flow: row nowrap;
-            justify-content: space-between;
-            // @include highlightMe();
-            border-right:none;
-        }
-        
-        .stFooterContent {
-            padding:20px;
-            display: flex;
-            flex-flow: row wrap;
-            position: absolute;
-            // @include highlightMe();
-            background:grey;
-            top: 0%;
-            left: 0;
-            color: #000;
-            font: .7rem $genericbody;
-            list-style-type: none;
-            margin: 0 auto;
-            width: 100%;
-            // height: auto;
-            justify-content: left;
-            ul {
-                list-style-type: none;
-            }
-            li {
-                a {
-                    text-decoration: none;
-                    color:black;
-                }
-                text-align: left;
-                // @include highlightMe();
-                padding:10px;
-                font-size: .8rem;
-                width:100%;
-                &:first-child {
-                    font-weight: bold;
-                    font-size: 1rem;
-                }
-                &:hover {
-                    transition: .3s ease;
-                    color: white;
-                }
-            }
-        }
-    
-
-
-    .burgerClick, .fa-bars {
-        display:none;
     }
 
+}
 
+.socialSection {
+    flex: 1 1 auto;
+}
 
-    #searchClick {
-        opacity: 0.5; 
+.theRow {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    // @include highlightMe();
+    border-right: none;
+}
+
+.stFooterContent {
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    position: absolute;
+    // @include highlightMe();
+    background: grey;
+    top: 0%;
+    left: 0;
+    color: #000;
+    font: .7rem $genericbody;
+    list-style-type: none;
+    margin: 0 auto;
+    width: 100%;
+    // height: auto;
+    justify-content: left;
+
+    ul {
+        list-style-type: none;
     }
 
-    // #search:hover {
-        // opacity:.50;
+    li {
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        text-align: left;
         // @include highlightMe();
-    // }
+        padding:10px;
+        font-size: .8rem;
+        width:100%;
+
+        &:first-child {
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        &:hover {
+            transition: .3s ease;
+            color: white;
+        }
+    }
+}
+
+
+
+.burgerClick,
+.fa-bars {
+    display: none;
+}
+
+
+
+#searchClick {
+    opacity: 0.5;
+}
+
+// #search:hover {
+// opacity:.50;
+// @include highlightMe();
+// }
 
 #searchClick:hover {
-    opacity:1;
+    opacity: 1;
 }
 
 
@@ -468,56 +504,119 @@ nav {
 
 
 .sticky {
-    position:fixed;
+    position: fixed;
     top: 0;
     opacity: 1;
     width: 100%;
     z-index: 3;
     background-color: black;
     transition: all .5s linear;
-    display:block;
-    h1, .nav-item, i {
+    display: block;
+
+    h1,
+    .nav-item,
+    i {
         color: white;
     }
- 
+
 }
 
 
 
 .content {
     padding: 0px 20px;
-    display:flex;
+    display: flex;
     flex-flow: row wrap;
     align-content: stretch;
-    max-width:100vw;
-    height:100%;
+    max-width: 100vw;
+    height: 100%;
 }
 
-.sticky + .content {
+.sticky+.content {
     padding-top: 70px;
 }
 
-.sticky + .pgKingContainer {
+.sticky+.pgKingContainer {
     padding-top: 70px;
 }
 
 
 .hideme {
-    opacity:0;
+    opacity: 0;
 }
 
 
 
 
+/////////////////ErrorPage
+/////////////////ErrorPage
+/////////////////ErrorPage
+/////////////////ErrorPage
+/////////////////ErrorPage
+/////////////////ErrorPage
+/////////////////ErrorPage
+/////////////////ErrorPage
+
+.error__contentContainer {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+
+.error__text {
+    text-align: center;
+}
+
+.error__text--bold {
+    color: black;
+    font: 1.6rem "Bowlby One SC", cursive;
+}
+
+.error__text--thin {
+    padding: 0px 20px;
+    color: black;
+    min-width: 160px;
+    font: 1.5rem "Playfair Display SC", serif;
+}
+
+.error__contentContainer--image {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+.error__contentContainer--margin {
+    margin: 20px;
+}
+
+.error__contentContainer--margin {
+    margin: 20px;
+}
+
+
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
+/////////////////featureLayout
 /////////////////featureLayout
 
 .pgKingContainer {
-    display:flex;
+    display: flex;
     flex-flow: row wrap;
     // padding: 16px;
     align-content: stretch;
-    max-width:100vw;
-    height:100%;
+    max-width: 100vw;
+    height: 100%;
 
 }
 
@@ -532,13 +631,37 @@ nav {
 
 .pgImgLeft {
     flex: 1 1 50%;
+
     img {
-        object-position: -70px -50px;   
+        object-position: -70px -50px;
         object-fit: cover;
-        height:100vh;
+        height: 100vh;
         width: 50vw;
         padding: 0 50px 0 0;
     }
+}
+
+.formContent {
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-flow: column wrap;
+    -webkit-box-pack: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.formCreate__container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.formCreate__container--input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border:1px solid transparent;
 }
 
 .pgContent {
@@ -549,19 +672,25 @@ nav {
     overflow-y: none;
 }
 
+
+.text__sanserif--standard {
+    font:1rem "Montserrat", sans-serif;
+}
+
 .headerImg {
-    width:auto;
-    margin-top:30px;
+    width: auto;
+    margin-top: 30px;
+
     // @include highlightMe();
     img {
         object-fit: cover;
-        height:100vh;
+        height: 100vh;
         width: 100%;
     }
 }
 
 .ftrWordBox {
-    display:flex;
+    display: flex;
     justify-content: center;
     position: relative;
     padding: 15px;
@@ -574,11 +703,13 @@ nav {
 .ftrWord {
     width: 35%;
     position: relative;
-    min-width:350px;
+    min-width: 350px;
     font: 1rem $genericbody;
+
     p {
         padding-bottom: 30px;
     }
+
     h3 {
         padding-bottom: 16px;
         text-align: center;
@@ -586,25 +717,29 @@ nav {
 }
 
 .ftTitle {
-    margin-top:30px;
-    margin-bottom:30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     position: relative;
     width: 100%;
     padding: 0 20px 20px 20px;
     flex: 1 1 auto;
-    font: 2.5em  $alternatemainfont;
+    font: 2.5em $alternatemainfont;
+
     h1 {
         text-align: center;
         font-weight: 400;
+
         span {
             font-weight: 900;
         }
     }
+
     h4 {
         padding: 10px 0 0 10px;
         font: 1.2rem $genericbody;
         margin: 0 auto;
         border-left: 2px solid black;
+
         span {
             background-color: white;
         }
@@ -613,9 +748,9 @@ nav {
 
 .scrollTitle {
     width: 100%;
-    top:70px;
+    top: 70px;
     position: sticky;
-    z-index:1;
+    z-index: 1;
     padding: 0px 70px;
     font-size: 2rem;
     // opacity:0;
@@ -631,26 +766,28 @@ nav {
 .ftImgLg {
     right: 0;
     // top: 5%;
-    top:60px;
+    top: 60px;
+
     img {
-        height:400px;
-        width:400px;
+        height: 400px;
+        width: 400px;
     }
 }
 
 .ftImgSm {
-    top:60px;
+    top: 60px;
     left: 0%;
+
     img {
-        height:300px;
+        height: 300px;
     }
 }
 
 .ftImgMd {
     top: 22%;
     left: 10%;
-    height:500px;
-    width:100%;
+    height: 500px;
+    width: 100%;
     object-fit: cover;
     padding-bottom: 30px;
 }
@@ -659,6 +796,7 @@ nav {
     top: 15%;
     left: 17%;
     z-index: 0;
+
     img {
         height: 150px;
     }
@@ -667,17 +805,18 @@ nav {
 .ftImgXl {
     right: 0;
     bottom: 10%;
+
     img {
         object-fit: cover;
-        width:400px;
-        height:300px;
+        width: 400px;
+        height: 300px;
     }
 }
 
 
 .pgTitle {
-    margin-top:30px;
-    margin-bottom:30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     position: relative;
     width: 120%;
     // top:10px;
@@ -687,20 +826,25 @@ nav {
     flex: 1 1 auto;
     font-size: 2.5em;
     font-family: $alternatemainfont;
+
     h1 {
         text-align: right;
         font-weight: 400;
+
         span {
             font-weight: 900;
         }
     }
+
     background-color: white;
+
     h4 {
         padding: 10px 0 0 10px;
-        font-size: 1.2rem;   
+        font-size: 1.2rem;
         font-family: $genericbody;
         margin: 0 auto;
         border-left: 2px solid black;
+
         span {
             background-color: white;
         }
@@ -708,11 +852,12 @@ nav {
 }
 
 .pgImage {
-    display:flex;
+    display: flex;
     flex: 1 1 50%;
     flex-flow: column nowrap;
     padding: 20px;
     align-items: flex-end;
+
     // border: 3px solid saddlebrown;
     img {
         height: auto;
@@ -726,762 +871,819 @@ nav {
     flex: 1 1 50%;
     // height: 100vh;
     padding: 20px 0 20px 0px;
-        p:not(:nth-child(1)) {
-            padding-top: 10px;
-        }
-    }
 
-    .pgMore {
-        // padding: 200px 10px;
-        margin-top: 30px;
-        display: flex;
-        justify-content: space-between;
-        div {
-            height:200px;
-            background-image: url('../Media/pokemon_detective.jpg');
-            background-size: cover;
-            background-position: 50% 0;
-            width: 200px;
-            @include highlightMe()
-        }
+    p:not(:nth-child(1)) {
+        padding-top: 10px;
     }
-    
+}
 
-    .imprint {
-        overflow: hidden;
-        color: darkgrey;
-        width:100%;
-        display: flex;
-        height:200px;
-        p {
-            text-align: center;
-            font-size: 12rem;
-            letter-spacing: -.95rem;
-            font-weight: 400;
-            font-family: $alternatemainfont;
-            background-color: gray;
-        }
+.pgMore {
+    // padding: 200px 10px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        height: 200px;
+        background-image: url('../Media/pokemon_detective.jpg');
+        background-size: cover;
+        background-position: 50% 0;
+        width: 200px;
+        @include highlightMe()
     }
-    
-    ////////////Standard Article
-    .stContents {
-        padding: 20px 80px;
-    }
-    
-    .stMain {
-        display: flex;
-        flex-flow: row wrap;
-        width: auto;
-        height: auto;
-        padding-bottom: 30px;
-    }
-    
-    
-    .stMainTitle {
-        font-size: 2.5em;
-        flex: 1 1 400px;
+}
+
+
+.imprint {
+    overflow: hidden;
+    color: darkgrey;
+    width: 100%;
+    display: flex;
+    height: 200px;
+
+    p {
+        text-align: center;
+        font-size: 12rem;
+        letter-spacing: -.95rem;
+        font-weight: 400;
         font-family: $alternatemainfont;
-        background-color: white;
-        padding: 20px;
-        h1 {
-            text-align: center;
-            font-weight: 400;
-        }
-        div {
-            margin-top:30px;
-            height: 4px;
-            width:60%;
-            background:black;
-        }
+        background-color: gray;
     }
-    
-    .stMainImg {
-        display: flex;
-        position: relative;
-        flex: 1 1 400px;
-        .imgTagline {
-            position: absolute;
-            top: 0;
-            right: 0;
-            height: 100%;
-            width: 100%;
-            text-align: right;
-            padding : 30px;
-            color: white;
-            font-family: $genericbody;
-            font-size: 1.2rem;
-            opacity: 0;
-            &:hover{
-                transition: .3s ease;
-                opacity:1;
-            }
+}
 
-        }
-        img {
-            flex: 1 400px;
-            object-fit: cover;
-            height:400px;
-        }
+////////////Standard Article
+.stContents {
+    padding: 20px 80px;
+}
+
+.stMain {
+    display: flex;
+    flex-flow: row wrap;
+    width: auto;
+    height: auto;
+    padding-bottom: 30px;
+}
+
+
+.stMainTitle {
+    font-size: 2.5em;
+    flex: 1 1 400px;
+    font-family: $alternatemainfont;
+    background-color: white;
+    padding: 20px;
+
+    h1 {
+        text-align: center;
+        font-weight: 400;
     }
 
-    .stInfo {
-        text-align:center;
-        p {
-            margin: auto;
-            width: 60%;
-            min-width: 60%;
-            font-family: $genericbody;
-            padding-bottom: 30px; 
-            // padding-right: 100px;  
-            text-align: left;
-            font-size: 1rem;
-        }
-        img {
-            padding-bottom: 30px;
-            margin: auto;
-            flex: 1 400px;
-            object-fit: cover;
-            height:400px;
-        }
+    div {
+        margin-top: 30px;
+        height: 4px;
+        width: 60%;
+        background: black;
     }
-    
-    .stBlockQuote {
-        margin: 0 auto; 
-        width: 60%;  
-        padding-bottom: 50px;
-        p {
-            margin: auto;
-            border-top: 3px solid greenyellow;
-            border-bottom: 3px solid greenyellow;
-            text-align: center;
-            font: 2em $alternatemainfont;
-            span {
-                font-weight: 900;
-            }
-        }
-    }
-    
+}
 
-    .stBaseline {
+.stMainImg {
+    display: flex;
+    position: relative;
+    flex: 1 1 400px;
+
+    .imgTagline {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
         width: 100%;
-        position: relative;
-        // background: grey;
-        display:flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        // align-content: center;
-        color:rgba(169, 169, 169, .2);
-        height: 300px;
-        div {
-            font: 12vw $alternatemainfont;
-            font-weight: 900; 
-            object-fit: cover;  
+        text-align: right;
+        padding: 30px;
+        color: white;
+        font-family: $genericbody;
+        font-size: 1.2rem;
+        opacity: 0;
+
+        &:hover {
+            transition: .3s ease;
+            opacity: 1;
+        }
+
+    }
+
+    img {
+        flex: 1 400px;
+        object-fit: cover;
+        height: 400px;
+    }
+}
+
+.stInfo {
+    text-align: center;
+
+    p {
+        margin: auto;
+        width: 60%;
+        min-width: 60%;
+        font-family: $genericbody;
+        padding-bottom: 30px;
+        // padding-right: 100px;  
+        text-align: left;
+        font-size: 1rem;
+    }
+
+    img {
+        padding-bottom: 30px;
+        margin: auto;
+        flex: 1 400px;
+        object-fit: cover;
+        height: 400px;
+    }
+}
+
+.stBlockQuote {
+    margin: 0 auto;
+    width: 60%;
+    padding-bottom: 50px;
+
+    p {
+        margin: auto;
+        border-top: 3px solid greenyellow;
+        border-bottom: 3px solid greenyellow;
+        text-align: center;
+        font: 2em $alternatemainfont;
+
+        span {
+            font-weight: 900;
         }
     }
-    
+}
+
+
+.stBaseline {
+    width: 100%;
+    position: relative;
+    // background: grey;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    // align-content: center;
+    color: rgba(169, 169, 169, .2);
+    height: 300px;
+
+    div {
+        font: 12vw $alternatemainfont;
+        font-weight: 900;
+        object-fit: cover;
+    }
+}
+
 .pgVidContainer {
     // padding: 100px;
     background: linear-gradient(180deg, rgb(179, 179, 179) 400px, #FFFF 0%);
 }
 
 .vidContainer {
-    width:100%;
+    width: 100%;
 }
+
 .vidElement {
-        video {
-            width:100%;
-        }
-        // @include highlightMe();
-    }
-    
-
-    .vidHeading {
-        margin-top: 50px;   
-        font: 1.2rem $genericbody;  
-        padding-bottom: 10px;
-        text-align: left;
-        width:100%;
-        span{
-            font-family: $subtitlefont;
-        }
+    video {
+        width: 100%;
     }
 
-    .vidsectionContainer {
-        display:flex;
-        flex-flow: column wrap;
-        text-align: left;
-        justify-content: space-evenly;
-        width:100%;
-        height:100%;
-        margin-bottom: 50px;
-        // @include highlightMe();
-        &:nth-child(1) {
-            padding-bottom: 100px;
-        }
-    }
-
-    .vidDeets {
-        min-height: 250px;
-        width: 60%; 
-        font: 1rem $genericbody;
-        h2 {
-            padding: 15px 0px;
-        }
-        p {
-
-            line-height: 1.8rem;
-        }
-    }
-    
-    .vidNav {
-        padding: 10px;
-        align-self: center;
-        height:100%;
-        a {
-            color:black;
-            text-decoration: none;
-        }
-    }
-    
-    
-    .playButtonLg {
-        width:auto;
-        position: absolute;
-        top:50%;
-        left:50%;
-        color: yellow;
-        //without this the button would be in the center 
-        //but as the origin point is by default the top left it would be a little off
-        transform: translate3d(-50%, -50%, 0); 
-    }
-
-
-    .vidWatchLabel {
-        position: absolute;
-        background: rgba(169, 169, 169, .6);
-        width: auto;
-        height:auto;
-        bottom: 4px;
-        padding: 5px;
-        left:0;
-        text-align: left;
-        font: 1rem $genericbody;
-        font-weight: 900;
-        color: #000;
-        text-transform:uppercase;
-        i {
-            color: yellow;
-        }
-    }
-
-    .vidInvite:hover + .vidTime {
-        // @include highlightMe();
-        opacity:1;
-    }
-    
-    .vidTime {
-        visibility: hidden;
-    }
-
-    .vidWatchLabelBox {
-        display:block;
-        position: relative;
-        p { 
-            display:inline;
-        }
-    }
-
-    .vidheroMiniFeat {
-        a {
-            text-decoration: none;
-        }
-        text-align: center;
-        // flex: 1 1 200px;
-        width:auto;
-        height: auto;
-        margin: 0px 5px;
-        position: relative;
-        display:flex;
-        flex-flow:column nowrap;
-        transition: .5s ease;
-            &:first-child .miniHeading p :after{
-                content:' New - 3 Minute Read ';
-                font-family: $genericbody;
-                color:red;
-                display:block;
-                font-weight: bold;
-            }
-            &:not(:hover) {
-                opacity: .75;
-            }
-            &:hover {
-                background: yellow;
-            }
-            img {
-                object-fit: cover;
-                width:200px;
-                height:200px;
-            }
-            .miniHeading {
-                position: relative;
-                height:100%;
-                // width: 100%;
-                width: 200px;
-                padding: 5px;
-                font-family: $mainfont;
-                font-size: .75rem;
-                p {
-                    padding-top: 15px;
-                    font-family: $genericbody;
-                }
-            }
-        }
-    
-        .extraVidSection {
-            // width:100%;
-            display:flex;
-            // margin-top:50px;
-            // @include highlightMe();
-            // margin-left: 300px;
-        }
-        
-        .theMenuFix {
-            height: auto;
-            margin-right:20px;
-            padding-left:10px;
-            text-align:center;
-            font: .8rem $genericbody;
-            ul {
-                list-style-type: none;
-            }
-            h3 {
-                padding:20px 0px;
-                font-family: $alternatemainfont;
-                span {
-                    font-family: $subtitlefont;
-                    letter-spacing: .2rem;
-                }
-            }
-            li {
-                padding:5px;
-                min-height: 60px;
-            }
-        }
-
-        .fixedMenu {
-            max-width: 400px;
-            min-width: 200px;
-            margin-right: 15px;
-            padding-left: 30px;
-            border: 2px solid grey;
-            height:100%;
-            position:sticky;
-            top:100px;
-            z-index: 1;
-            box-shadow: 5px 10px 18px #888888;
-            // @include highlightMe();
-            // margin-right:10px;
-        }
-        
-        .extraVid {
-            margin: 0 auto; 
-            display: flex;
-            flex-flow:row wrap;
-            justify-content:center;
-            // @include highlightMe();
-            // width: 1000vw;
-            width:100%;
-        }
-
-        .ttEntry {
-            position:relative;
-            // @include highlightMe();
-            // background-image: url('../Media/desus and mero.jpg');
-            // background-size:cover;
-            
-            img {
-                object-fit: contain;
-                position: absolute;
-                top:0;
-                left:0;
-                @include highlightMe();
-                // width: 100px;
-                // height: 30px;
-                overflow: hidden;
-            }
-        }
-        
-        .vidContent {
-            position:relative;
-            video {
-                height:450px;
-            }
-        }
-
-        .vidHero {
-            margin-top:50px;
-            position: relative;
-            border: transparent;
-            display:flex;
-            width: 100%;
-            align-self: flex-start;
-            color: black;
-            height: auto;
-        }
-
-        .vidheroMain {
-            align-self: flex-end;
-            width:100%;
-            height: auto;
-            display: flex;
-            justify-content: center;
-            position: relative;
-            a {
-                max-height: 450px;
-                padding: 0;
-                width: 100%;
-                overflow: hidden;
-                img {
-                    // uncomment this and comment out min width and height for a poss improved layout
-                    // flex:1 1 700px;
-                    width: 100%;
-                    height: 500px;
-                    object-fit: cover;
-                }
-            }
-        }
-
-        .vidMainHeading {
-            display: flex;
-            max-height:450px;
-            position: relative;
-            width: 60%;
-            background-color: white;
-            &:hover {
-                background-color:rgba(219, 219, 219, 1);
-                transition: .5s;
-            }
-            h2 {
-                width:100%;
-                padding: 20px;
-                align-self: center;
-                left: 0;
-                font-size: 1.4rem;
-                text-align: center;
-                position: absolute;
-                font-family: $mainfont;
-                &:after {
-                    content: "";
-                    width: 20%;
-                    border-bottom: 2px solid black;
-                    position: absolute;
-                    top: 100%;
-                    left: 40%;
-                }
-            }
-                p {
-                    position: absolute;
-                    bottom:10%;
-                    left:65%;
-                    font-family: $mainfont;
-                    text-align: center;
-                    span {
-                        font-family: $subtitlefont;
-                    font-size: .8rem;                          
-                    text-align: right;
-                    }
-                }
-        }
-        
-        .vidSelection {
-            display:flex;
-            justify-content: space-between;
-            height:auto;
-            width: calc(100% - 80px);
-            // @include highlightMe();
-            overflow: hidden;
-            margin-bottom: 100px;
-        }
-        
-        .vidChoice {
-            flex: 1 1 50px;
-            margin: 5px;
-            video  {
-                width: 200px;
-            } 
-            
-        }
-        
-        .vidHeroSecond {
-            width:100%;
-            display: flex;
-            flex-flow: row nowrap;
-        }
-
-    ///// MEDIA QUERIES
-    @media (max-width:660px ) {
-        main {
-            overflow-x: none;
-        }
-
-        .ftTitle {
-            font-size: 1.5em;
-            margin-top:0;
-        }
-
-        .scrollTitle {
-            padding:0;
-            position: relative;
-            margin-top:0;
-        }
-
-        .hideme {
-            opacity:1;
-        }
-
-        .hero {
-            .heroMain {
-                .mainHeading {
-                    h2 {
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-        }
-    }
-
-    @media (max-width: 700px) {
-        .ftImg {
-            img {
-                opacity: 0;
-                transition: .4s ease;
-            }
-        }
-        nav {
-            overflow: hidden;
-        }
-        .stMainTitle {
-            font-size: 1.3rem;
-        }
-        .stInfo {
-            p {
-                width:100%;
-            }
-        }  
-        .stContents {
-            padding: 20px;
-        }
-        
-        // .heroMiniFeat {
-        //     flex-flow: column wrap;
-        // }
-    }
-  
-    @media (max-width: 835px) {
-        .heroMain {
-           flex-flow: column wrap;
-           transition: .4s ease;
-        }
-    
-        .hero .heroMain .mainHeading { 
-            height: 150px;
-            transition: .4s ease;
-            width:100%;
-        }
-    }
-
-    // @media (max-width: 856px) {
-       
-    // }
-    
-
-    @media (max-width: 865px) {
-        .pgKingContainer {
-            flex-flow: column wrap;
-        }
-        
-        .pgImgLeft {
-            flex: 1 1 100%;
-            img {
-                object-position: 0 20%;   
-                object-fit: cover;
-                height:50vh;
-                width: 100vw;
-                padding: 0px;
-            }
-        }
-        .theBig2 {
-            .heroMiniFeat:nth-child(3) {
-                display:none;
-            }
-        }
-    }
-
-
-    @media (max-width:1000px) {
-        .stBlockQuote {
-            p {
-                font: 1.3rem $alternatemainfont;
-            }
-        }
-        .stMainTitle {
-            font-size: 1.75rem;
-            // h1 {
-            // }
-        }
-        .stInfo {
-            p {
-                width:80%;
-            }
-        }
-    }
-
-    @media (max-width: 1040px) {
-        
-        nav {
-            align-items:flex-start;
-            .spanny, input {
-                display: block;
-            } 
-        }
-
-        .navContent {
-            // @include highlightMe();
-            flex-flow: column wrap;
-            align-items:center;
-            margin-right: 60px;
-            .nav-item {
-            display:none;   
-            transition: all .3s linear;
-            }
-        }   
-
-            .burgerClick:checked ~ * {
-                .nav-item {
-                    display: block;
-                    margin: 10px 0px;
-                }
-            }
-        
-
-   
-        .burgerClick, .fa-bars {
-           display: block;
-           position: absolute;
-           top: 0;
-           right:0;
-           margin: 20px;
-        }
-    
-
-        .burgerClick{
-            cursor:pointer;
-            opacity:0;
-        }
-      
-        // .heroMiniFeat {
-        //         img {
-        //             height:200px;
-        //             width: 300px;
-        //             transition: .4s ease;
-        //             }
-        // }
-    
-        .hero {
-            .heroMain {
-                .mainHeading {
-                    h2 {
-                        &:after {
-                            border: none;
-                            content:'';
-                        }
-                    }
-                }
-            }
-        }
-    }
-    
-    @media (max-width: 1050px) {
-        .pgTitle {
-            right: 0;
-            font-size: 3rem;
-            h4 {
-                font-size: .9rem;
-            }
-        }
-    }
-    
-    @media (max-width: 1155px) {
-        .featureHeading {
-            width: 270px;
-            height: 150px;
-            font-size: .8rem;
-        }
-    
-        .feature {
-            height:375px;
-            width:550px;
-        }
-    
-        .hero {
-            .heroMain {
-                aside {
-                    h2 {
-                        font-size: 1.2rem;
-                        transition: .4s ease;
-                    }
-                }
-            }
-        }
-    
-        // .heroMiniFeat {
-        //     margin:10px;
-        //     img {
-        //         height:150px;
-        //         width: 150px;
-        //         transition: .4s ease;
-        //     }
-        // }
-
-        // .heroSecond {
-        //     justify-content: space-between;
-        // }
-
-        .mainHeading {
-            p {
-                display: none;
-            }
-        }
+    // @include highlightMe();
 }
 
-    // @media (max-width:1200px) {
-    //     .navContent {
-    //                 a, h4 {
-    //                     // font: .8rem $alternatemainfont;
-    //                     // font-weight: 900;
-    //                 }
-    //             }        
-    //         }
 
-    @media (max-width:1215px) {
-                .stBlockQuote {
-                    p {
-                        font: 1.7rem $alternatemainfont;
-                    }
-                }
+.vidHeading {
+    margin-top: 50px;
+    font: 1.2rem $genericbody;
+    padding-bottom: 10px;
+    text-align: left;
+    width: 100%;
+
+    span {
+        font-family: $subtitlefont;
+    }
+}
+
+.vidsectionContainer {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: left;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 50px;
+
+    // @include highlightMe();
+    &:nth-child(1) {
+        padding-bottom: 100px;
+    }
+}
+
+.vidDeets {
+    min-height: 250px;
+    width: 60%;
+    font: 1rem $genericbody;
+
+    h2 {
+        padding: 15px 0px;
     }
 
+    p {
 
-    @media (max-width: 1256px) {
-        .theBig1 {
-            .heroMiniFeat {
-                height: 600px;
-                img {
-                    height: 510px;   
+        line-height: 1.8rem;
+    }
+}
+
+.vidNav {
+    padding: 10px;
+    align-self: center;
+    height: 100%;
+
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+
+.playButtonLg {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: yellow;
+    //without this the button would be in the center 
+    //but as the origin point is by default the top left it would be a little off
+    transform: translate3d(-50%, -50%, 0);
+}
+
+
+.vidWatchLabel {
+    position: absolute;
+    background: rgba(169, 169, 169, .6);
+    width: auto;
+    height: auto;
+    bottom: 4px;
+    padding: 5px;
+    left: 0;
+    text-align: left;
+    font: 1rem $genericbody;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+
+    i {
+        color: yellow;
+    }
+}
+
+.vidInvite:hover+.vidTime {
+    // @include highlightMe();
+    opacity: 1;
+}
+
+.vidTime {
+    visibility: hidden;
+}
+
+.vidWatchLabelBox {
+    display: block;
+    position: relative;
+
+    p {
+        display: inline;
+    }
+}
+
+.vidheroMiniFeat {
+    a {
+        text-decoration: none;
+    }
+
+    text-align: center;
+    // flex: 1 1 200px;
+    width:auto;
+    height: auto;
+    margin: 0px 5px;
+    position: relative;
+    display:flex;
+    flex-flow:column nowrap;
+    transition: .5s ease;
+
+    &:first-child .miniHeading p :after {
+        content: ' New - 3 Minute Read ';
+        font-family: $genericbody;
+        color: red;
+        display: block;
+        font-weight: bold;
+    }
+
+    &:not(:hover) {
+        opacity: .75;
+    }
+
+    &:hover {
+        background: yellow;
+    }
+
+    img {
+        object-fit: cover;
+        width: 200px;
+        height: 200px;
+    }
+
+    .miniHeading {
+        position: relative;
+        height: 100%;
+        // width: 100%;
+        width: 200px;
+        padding: 5px;
+        font-family: $mainfont;
+        font-size: .75rem;
+
+        p {
+            padding-top: 15px;
+            font-family: $genericbody;
+        }
+    }
+}
+
+.extraVidSection {
+    // width:100%;
+    display: flex;
+    // margin-top:50px;
+    // @include highlightMe();
+    // margin-left: 300px;
+}
+
+.theMenuFix {
+    height: auto;
+    margin-right: 20px;
+    padding-left: 10px;
+    text-align: center;
+    font: .8rem $genericbody;
+
+    ul {
+        list-style-type: none;
+    }
+
+    h3 {
+        padding: 20px 0px;
+        font-family: $alternatemainfont;
+
+        span {
+            font-family: $subtitlefont;
+            letter-spacing: .2rem;
+        }
+    }
+
+    li {
+        padding: 5px;
+        min-height: 60px;
+    }
+}
+
+.fixedMenu {
+    max-width: 400px;
+    min-width: 200px;
+    margin-right: 15px;
+    padding-left: 30px;
+    border: 2px solid grey;
+    height: 100%;
+    position: sticky;
+    top: 100px;
+    z-index: 1;
+    box-shadow: 5px 10px 18px #888888;
+    // @include highlightMe();
+    // margin-right:10px;
+}
+
+.extraVid {
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    // @include highlightMe();
+    // width: 1000vw;
+    width: 100%;
+}
+
+.ttEntry {
+    position: relative;
+    // @include highlightMe();
+    // background-image: url('../Media/desus and mero.jpg');
+    // background-size:cover;
+
+    img {
+        object-fit: contain;
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include highlightMe();
+        // width: 100px;
+        // height: 30px;
+        overflow: hidden;
+    }
+}
+
+.vidContent {
+    position: relative;
+
+    video {
+        height: 450px;
+    }
+}
+
+.vidHero {
+    margin-top: 50px;
+    position: relative;
+    border: transparent;
+    display: flex;
+    width: 100%;
+    align-self: flex-start;
+    color: black;
+    height: auto;
+}
+
+.vidheroMain {
+    align-self: flex-end;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    a {
+        max-height: 450px;
+        padding: 0;
+        width: 100%;
+        overflow: hidden;
+
+        img {
+            // uncomment this and comment out min width and height for a poss improved layout
+            // flex:1 1 700px;
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+    }
+}
+
+.vidMainHeading {
+    display: flex;
+    max-height: 450px;
+    position: relative;
+    width: 60%;
+    background-color: white;
+
+    &:hover {
+        background-color: rgba(219, 219, 219, 1);
+        transition: .5s;
+    }
+
+    h2 {
+        width: 100%;
+        padding: 20px;
+        align-self: center;
+        left: 0;
+        font-size: 1.4rem;
+        text-align: center;
+        position: absolute;
+        font-family: $mainfont;
+
+        &:after {
+            content: "";
+            width: 20%;
+            border-bottom: 2px solid black;
+            position: absolute;
+            top: 100%;
+            left: 40%;
+        }
+    }
+
+    p {
+        position: absolute;
+        bottom: 10%;
+        left: 65%;
+        font-family: $mainfont;
+        text-align: center;
+
+        span {
+            font-family: $subtitlefont;
+            font-size: .8rem;
+            text-align: right;
+        }
+    }
+}
+
+.vidSelection {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    width: calc(100% - 80px);
+    // @include highlightMe();
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.vidChoice {
+    flex: 1 1 50px;
+    margin: 5px;
+
+    video {
+        width: 200px;
+    }
+
+}
+
+.vidHeroSecond {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+///// MEDIA QUERIES
+@media (max-width:660px) {
+    main {
+        overflow-x: none;
+    }
+
+    .ftTitle {
+        font-size: 1.5em;
+        margin-top: 0;
+    }
+
+    .scrollTitle {
+        padding: 0;
+        position: relative;
+        margin-top: 0;
+    }
+
+    .hideme {
+        opacity: 1;
+    }
+
+    .hero {
+        .heroMain {
+            .mainHeading {
+                h2 {
+                    font-size: 1.2rem;
                 }
             }
         }
     }
+}
+
+@media (max-width: 700px) {
+    .ftImg {
+        img {
+            opacity: 0;
+            transition: .4s ease;
+        }
+    }
+
+    nav {
+        overflow: hidden;
+    }
+
+    .stMainTitle {
+        font-size: 1.3rem;
+    }
+
+    .stInfo {
+        p {
+            width: 100%;
+        }
+    }
+
+    .stContents {
+        padding: 20px;
+    }
+
+    // .heroMiniFeat {
+    //     flex-flow: column wrap;
+    // }
+}
+
+@media (max-width: 835px) {
+    .heroMain {
+        flex-flow: column wrap;
+        transition: .4s ease;
+    }
+
+    .hero .heroMain .mainHeading {
+        height: 150px;
+        transition: .4s ease;
+        width: 100%;
+    }
+}
+
+// @media (max-width: 856px) {
+
+// }
+
+
+@media (max-width: 865px) {
+    .pgKingContainer {
+        flex-flow: column wrap;
+    }
+
+    .pgImgLeft {
+        flex: 1 1 100%;
+
+        img {
+            object-position: 0 20%;
+            object-fit: cover;
+            height: 50vh;
+            width: 100vw;
+            padding: 0px;
+        }
+    }
+
+    .theBig2 {
+        .heroMiniFeat:nth-child(3) {
+            display: none;
+        }
+    }
+}
+
+
+@media (max-width:1000px) {
+    .stBlockQuote {
+        p {
+            font: 1.3rem $alternatemainfont;
+        }
+    }
+
+    .stMainTitle {
+        font-size: 1.75rem;
+        // h1 {
+        // }
+    }
+
+    .stInfo {
+        p {
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: 1040px) {
+
+    nav {
+        align-items: flex-start;
+
+        .spanny,
+        input {
+            display: block;
+        }
+    }
+
+    .navContent {
+        // @include highlightMe();
+        flex-flow: column wrap;
+        align-items: center;
+        margin-right: 60px;
+
+        .nav-item {
+            display: none;
+            transition: all .3s linear;
+        }
+    }
+
+    .burgerClick:checked~* {
+        .nav-item {
+            display: block;
+            margin: 10px 0px;
+        }
+    }
+
+
+
+    .burgerClick,
+    .fa-bars {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 20px;
+    }
+
+
+    .burgerClick {
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    // .heroMiniFeat {
+    //         img {
+    //             height:200px;
+    //             width: 300px;
+    //             transition: .4s ease;
+    //             }
+    // }
+
+    .hero {
+        .heroMain {
+            .mainHeading {
+                h2 {
+                    &:after {
+                        border: none;
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1050px) {
+    .pgTitle {
+        right: 0;
+        font-size: 3rem;
+
+        h4 {
+            font-size: .9rem;
+        }
+    }
+}
+
+@media (max-width: 1155px) {
+    .featureHeading {
+        width: 270px;
+        height: 150px;
+        font-size: .8rem;
+    }
+
+    .feature {
+        height: 375px;
+        width: 550px;
+    }
+
+    .hero {
+        .heroMain {
+            aside {
+                h2 {
+                    font-size: 1.2rem;
+                    transition: .4s ease;
+                }
+            }
+        }
+    }
+
+    // .heroMiniFeat {
+    //     margin:10px;
+    //     img {
+    //         height:150px;
+    //         width: 150px;
+    //         transition: .4s ease;
+    //     }
+    // }
+
+    // .heroSecond {
+    //     justify-content: space-between;
+    // }
+
+    .mainHeading {
+        p {
+            display: none;
+        }
+    }
+}
+
+// @media (max-width:1200px) {
+//     .navContent {
+//                 a, h4 {
+//                     // font: .8rem $alternatemainfont;
+//                     // font-weight: 900;
+//                 }
+//             }        
+//         }
+
+@media (max-width:1215px) {
+    .stBlockQuote {
+        p {
+            font: 1.7rem $alternatemainfont;
+        }
+    }
+}
+
+
+@media (max-width: 1256px) {
+    .theBig1 {
+        .heroMiniFeat {
+            height: 600px;
+
+            img {
+                height: 510px;
+            }
+        }
+    }
+}
+
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////
