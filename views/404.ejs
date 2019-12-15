@@ -1,9 +1,20 @@
 <% include partials/header %>
 
-<h1>404</h1>
-<H3>Page not found</H3>
-<div>
-    <img class='pgImage' src="/Media/weebae-ohhh.gif" alt="404 gif of man in shock">
+<div class='error__contentContainer error__contentContainer--margin'>
+
+    <div class='error__text error__contentContainer--margin'>
+        <h1 class='error__text--thin '>404</h1>
+        <h3 class='error__text--thin'>Page not found</h3>
+    </div>
+    <div class='error__contentContainer--image'>
+        <img src="/Media/weebae-ohhh.gif" alt="404 gif of man in shock">
+    </div>
+
+    <div class='error__text error__contentContainer--margin'>
+        <a href='/articles'>
+            <h3 class='error__text--bold'>Back to the homepage</h3>
+        </a>
+    </div>
 </div>
 
 <% include partials/footer %>
