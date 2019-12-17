@@ -8,20 +8,34 @@
         <h5 class='sectionTag'>Create a new article posting here</h5>
     </div>
     <form class='formContent' action="/articles" method="POST">
-        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[title]" id="" placeholder="title">
-        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[author]" id="" placeholder="author">
-        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[image][heroImage][imagePath]" id=""
-            placeholder="hero image">
-        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[image][leftSmallIntroImage][imagePath]"
-            id="" placeholder="left handside image">
-        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[image][rightMedIntroImage][imagePath]"
-            id="" placeholder="right handside image">
-        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[image][topTextImage][imagePath]" id=""
-            placeholder="top text image">
-        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[image][bottomTextImage][imagePath]" id=""
-            placeholder="bottom text image">
-        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[articleSlug]" id=""
-            placeholder="Brief article summary">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[title]" id=""
+            placeholder="title">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[author]" id=""
+            placeholder="author">
+        <input class='formCreate__container--input text__sanserif--standard' type="text"
+            name="article[image][heroImage][imagePath]" id="" placeholder="hero image">
+        <input class='formCreate__container--input text__sanserif--standard' type="text"
+            name="article[image][leftSmallIntroImage][imagePath]" id="" placeholder="left handside image">
+        <input class='formCreate__container--input text__sanserif--standard' type="text"
+            name="article[image][rightMedIntroImage][imagePath]" id="" placeholder="right handside image">
+        <input class='formCreate__container--input text__sanserif--standard' type="text"
+            name="article[image][topTextImage][imagePath]" id="" placeholder="top text image">
+        <input class='formCreate__container--input text__sanserif--standard' type="text"
+            name="article[image][bottomTextImage][imagePath]" id="" placeholder="bottom text image">
+        <input class='formCreate__container--input text__sanserif--standard' type="text" name="article[articleSlug]"
+            id="" placeholder="Brief article summary">
+        <h3 class='formCreate__container--input text__sanserif--standard formCreate__textarea--heading'>Paragraph 1</h3>
+        <textarea class="text__sanserif--standard formCreate__container--input" placeholder="insert text here" name="article[text][paragraph1]"
+            rows="10" cols="50"></textarea>
+        <h3 class='formCreate__container--input text__sanserif--standard formCreate__textarea--heading'>Paragraph 2</h3>
+        <textarea class="text__sanserif--standard formCreate__container--input" placeholder="insert text here" name="article[text][paragraph2]"
+            rows="10" cols="50"></textarea>
+        <h3 class='formCreate__container--input text__sanserif--standard formCreate__textarea--heading'>Paragraph 3</h3>
+        <textarea class="text__sanserif--standard formCreate__container--input" placeholder="insert text here" name="article[text][paragraph3]"
+            rows="10" cols="50"></textarea>
+        <h3 class='formCreate__container--input text__sanserif--standard formCreate__textarea--heading'>Paragraph 4</h3>
+        <textarea class="text__sanserif--standard formCreate__container--input" placeholder="insert text here" name="article[text][paragraph4]"
+            rows="10" cols="50"></textarea>
         <label class='formCreate__container--input text__sanserif--standard'>Topics: </label>
         <select class='formCreate__container--input text__sanserif--standard' name="article[topic]" id="Sections">
             <option value="The Classics">The Classics</option>
