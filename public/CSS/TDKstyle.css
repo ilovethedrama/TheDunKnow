@@ -498,6 +498,10 @@ nav {
   border-radius: 5px;
   border: 1px solid transparent; }
 
+.formCreate__textarea--heading {
+  padding-bottom: 0;
+  margin-bottom: 0; }
+
 .pgContent {
   -webkit-box-flex: 1;
           flex: 1 1 50%;
