@@ -24,7 +24,7 @@ function navBarStick() {
 }
 
 function titleStick() {
-  if (window.pageYOffset >= 900) {
+  if (window.pageYOffset >= 250) {
     headingTitle.classList.add("sticky");
     console.log('sticky added');
   } else {
